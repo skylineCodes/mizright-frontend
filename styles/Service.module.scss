@@ -2,6 +2,7 @@
     width: 100vw;
     height: auto;
     position: relative;
+    overflow: hidden;
 
     .svg_background {
         position: absolute;
@@ -186,7 +187,7 @@
                     &:not(:first-child) {
                         padding-top: 2rem;
                     }
-                    
+
                     .span {
                         margin-top: .1rem;
                         margin-right: .3rem;
