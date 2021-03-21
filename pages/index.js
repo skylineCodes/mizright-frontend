@@ -3,6 +3,7 @@ import Hero from '../components/Hero';
 import Feature from '../components/Feature';
 import HowItWorks from '../components/HowItWorks';
 import Service from '../components/Service';
+import Advert from '../components/Advert';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       {/* <Feature /> */}
       <HowItWorks />
       <Service />
+      <Advert />
     </>
   );
 }
