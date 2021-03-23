@@ -61,7 +61,7 @@ const Hero = () => {
                 </a>
               </div>
               <div className={heroStyles.image_div}>
-                <img src='../images/fashion.png' alt='fashion' className={heroStyles.image} />
+                <img src='../images/giwa.png' alt='fashion' className={heroStyles.image} />
               </div>
             </main>
           </div>

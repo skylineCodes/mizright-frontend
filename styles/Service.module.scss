@@ -24,7 +24,7 @@
             margin-top: 5rem;
             border: 3px dashed #6A6A6A;
         }
-        
+
         &::after {
             content: '';
             width: 150px;
@@ -570,34 +570,82 @@
 
         .card {
             width: 95vw;
-            height: auto;
-            margin-top: 9rem;
+
+            .card_list {
+                align-items: flex-start;
+
+                .card_list_item {
+                    text-align: start;
+                    letter-spacing: 0em;
+
+                    &:not(:first-child) {
+                        padding-top: 2rem;
+                    }
+
+                    .span {
+                        margin-top: .1rem;
+                        margin-right: .1rem;
+                        padding-right: .5rem;
+
+                        .span_svg {
+                            fill: rgb(255, 255, 255);
+                            height: 24px;
+                            width: 24px;
+                        }
+                    }
+                }
+            }
         }
 
         .image {
             display: flex;
             justify-content: center;
-            width: 40vw;
+            width: 60vw;
             height: 35vh;
             top: 2%;
-            right: 30%;
+            right: 20%;
         }
     }
-    
+
     .servicetwo {
         margin-bottom: 4rem;
 
         .card {
             width: 95vw;
+
+            .card_list {
+                align-items: flex-start;
+
+                .card_list_item {
+                    text-align: start;
+                    letter-spacing: 0em;
+
+                    &:not(:first-child) {
+                        padding-top: 2rem;
+                    }
+
+                    .span {
+                        margin-top: .1rem;
+                        margin-right: .1rem;
+                        padding-right: .5rem;
+
+                        .span_svg {
+                            fill: rgb(255, 255, 255);
+                            height: 24px;
+                            width: 24px;
+                        }
+                    }
+                }
+            }
         }
         
         .image {
             display: flex;
             justify-content: center;
-            width: 40vw;
+            width: 60vw;
             height: 35vh;
             top: 2%;
-            left: 30%;
+            left: 20%;
         }
     }
 }

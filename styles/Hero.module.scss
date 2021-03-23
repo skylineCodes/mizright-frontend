@@ -11,7 +11,6 @@
     }
 
     .container {
-        position: relative;
         width: 100%;
         max-width: 1317px;
         margin: 0 auto;
@@ -20,7 +19,6 @@
     }
 
     .main {
-        position: relative;
         display: grid;
         grid-template-columns: 1fr 1fr;
         place-items: center;
@@ -56,12 +54,12 @@
 
                 .scissors {
                     position: absolute;
-                    left: 5.5rem;
+                    left: 13.5rem;
                 }
 
                 .lines {
                     position: absolute;
-                    left: 12rem;
+                    left: 19rem;
                 }
             }
 
@@ -109,18 +107,17 @@
 
         .image_div {
             position: absolute;
-            width: 70rem;
-            height: 32rem;
-            top: 50%;
-            right: 0;
-            transform: translate(29rem, -50%);
-            z-index: -2;
+            top: 18%;
+            right: 15%;
+            z-index: 2;
             opacity: 0;
             animation: fade-in ease-in .5s 2s forwards;
 
             .image {
-                height: 500px;
-                width: 700px;
+                height: 70vh;
+                width: 22vw;
+                border-radius: 50px;
+                border: 1rem solid #fff;
             }
         }
     }
@@ -151,11 +148,11 @@
 
             .scissors_div {
                 .scissors {
-                    left: -10px !important;
+                    left: 18px !important;
                 }
 
                 .lines {
-                    left: 5rem !important;
+                    left: 7rem !important;
                 }
             }
 
@@ -172,7 +169,15 @@
         height: inherit;
 
         .main {
-            grid-template-rows: 1fr 1fr !important;
+            .image_div {
+
+                .image {
+                    height: 70vh;
+                    width: 30vw;
+                    border-radius: 50px;
+                    border: 1rem solid #fff;
+                }
+            }
         }
     }
 }
@@ -182,7 +187,6 @@
         height: inherit;
 
         .main {
-            grid-template-columns: none;
 
             .text {
                 width: 100% !important;
@@ -198,11 +202,11 @@
 
                 .scissors_div {
                     .scissors {
-                        left: -10px !important;
+                        left: 10px !important;
                     }
 
                     .lines {
-                        left: 5rem !important;
+                        left: 6rem !important;
                     }
                 }
 
@@ -215,17 +219,71 @@
                 }
 
                 .item_btn {
-                    width: 50% !important;
+                    width: 70% !important;
                 }
             }
 
             .image_div {
-                width: 55rem !important;
-                top: 70% !important;
 
                 .image {
-                    height: 450px;
-                    width: 450px;
+                    height: 60vh;
+                    width: 30vw;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 703px) {
+    .hero {
+        height: inherit;
+
+        .main {
+
+            .text {
+                width: 100% !important;
+                padding: auto auto !important;
+                margin-left: auto !important;
+
+                .item_title {
+                    font-size: 30px !important;
+                    line-height: 148.7% !important;
+                    letter-spacing: 0.02em;
+                    margin-top: 2rem !important;
+                }
+
+                .scissors_div {
+                    .scissors {
+                        left: 40px !important;
+                        height: 70px;
+                        width: 70px;
+                    }
+
+                    .lines {
+                        left: 5rem !important;
+                        width: 200px;
+                    }
+                }
+
+                .item_description {
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 18px !important;
+                    line-height: 148.7% !important;
+                    letter-spacing: 0.02em;
+                }
+
+                .item_btn {
+                    width: auto !important;
+                }
+            }
+
+            .image_div {
+                right: 10%;
+
+                .image {
+                    height: 70vh;
+                    width: 35vw;
                 }
             }
         }
@@ -234,10 +292,13 @@
 
 @media only screen and (max-width: 480px) {
     .hero {
-        height: inherit;
+        height: 90vh;
 
         .main {
-            grid-template-columns: none;
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-content: center;
+            place-items: center;
 
             .text {
                 width: 100% !important;
@@ -254,13 +315,13 @@
                 .scissors_div {
                     
                     .scissors {
-                        left: 10px !important;
-                        width: 100px !important;
+                        left: 35px !important;
+                        width: 80px !important;
                         height: 80px !important;
                     }
 
                     .lines {
-                        left: 4.5rem !important;
+                        left: 5.5rem !important;
                         width: 200px !important;
                     }
                 }
@@ -276,12 +337,125 @@
             }
 
             .image_div {
-                width: 53rem !important;
-                top: 70% !important;
+                width: 100% !important;
+                text-align: center;
+                right: 0;
+                left: 0;
+                top: 75%;
 
                 .image {
-                    height: 400px !important;
-                    width: 400px !important;
+                    height: 58vh;
+                    width: 60vw;
+                    border-radius: 0px;
+                    border: none;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 398px) {
+    .hero {
+        height: 100vh;
+
+        .main {
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-content: center;
+            place-items: center;
+
+            .text {
+                width: 100% !important;
+                padding: auto auto !important;
+                margin-left: auto !important;
+
+                .item_title {
+                    font-size: 30px !important;
+                    line-height: 148.7% !important;
+                    letter-spacing: 0.02em;
+                    margin-top: 2rem !important;
+                }
+
+                .scissors_div {
+                    
+                    .scissors {
+                        left: 35px !important;
+                        width: 80px !important;
+                        height: 80px !important;
+                    }
+
+                    .lines {
+                        left: 5.5rem !important;
+                        width: 200px !important;
+                    }
+                }
+
+                .item_description {
+                    font-size: 18px !important;
+                    line-height: 148.7% !important;
+                }
+
+                .item_btn {
+                    width: 90% !important;
+                }
+            }
+
+            .image_div {
+                width: 100% !important;
+                text-align: center;
+                right: 0;
+                left: 0;
+                top: 83%;
+
+                .image {
+                    height: 58vh;
+                    width: 70vw;
+                    border-radius: 0px;
+                    border: none;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 325px) {
+    .hero {
+        height: 100vh;
+
+        .main {
+
+            .text {
+
+                .scissors_div {
+
+                    .lines {
+                        left: 5.5rem !important;
+                        width: 200px !important;
+                    }
+                }
+
+                .item_description {
+                    font-size: 18px !important;
+                    line-height: 148.7% !important;
+                }
+
+                .item_btn {
+                    width: auto !important;
+                }
+            }
+
+            .image_div {
+                width: 100% !important;
+                text-align: center;
+                right: 0;
+                left: 0;
+                top: 95%;
+
+                .image {
+                    height: 58vh;
+                    width: 70vw;
+                    border-radius: 0px;
+                    border: none;
                 }
             }
         }
