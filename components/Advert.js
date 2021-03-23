@@ -1,36 +1,66 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMoneyBill, faTshirt, faWrench } from '@fortawesome/free-solid-svg-icons';
 import advertStyles from '../styles/Advert.module.scss';
 
 const Advert = () => {
-    return (
-      <>
-        <section className={advertStyles.advert}>
+  return (
+    <>
+      <section className={advertStyles.advert}>
+        <div className={advertStyles.text_div}>
+          <div className={advertStyles.section_header}>
+            <h1 className={advertStyles.mainText}>
+              Sew Latest Contemporary styles from the comfort of your home
+            </h1>
+            <ul className={advertStyles.features}>
+              <li className={advertStyles.feature_lists}>
+                <h6 className={advertStyles.feature_header}>
+                  <span className={advertStyles.feature_icon}>
+                    <FontAwesomeIcon icon={faTshirt} />
+                  </span>
+                  We source fabric for you
+                </h6>
+                <p className={advertStyles.feature_paragraph}>
+                  We communicate with you while finding the best fabric that
+                  suits you
+                </p>
+              </li>
+              <li className={advertStyles.feature_lists}>
+                <h6 className={advertStyles.feature_header}>
+                  <span className={advertStyles.feature_icon}>
+                    <FontAwesomeIcon icon={faMoneyBill} />
+                  </span>
+                  Part payment
+                </h6>
+                <p className={advertStyles.feature_paragraph}>
+                  Pay 60% upfront and complete payment when the cloth is ready
+                  for delivery
+                </p>
+              </li>
+              <li className={advertStyles.feature_lists}>
+                <h6 className={advertStyles.feature_header}>
+                  <span className={advertStyles.feature_icon}>
+                    <FontAwesomeIcon icon={faWrench} />
+                  </span>
+                  Free alterations
+                </h6>
+                <p className={advertStyles.feature_paragraph}>
+                  All alterations are free if complaints are within 7 days of
+                  delivery
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className={advertStyles.image_div}>
           <img
-            src='../images/tailor_machine.jpg'
-            alt='tailor machine'
-            className={advertStyles.background_image}
+            src='../images/princess.jpg'
+            alt='blue gown'
+            className={advertStyles.image}
           />
-          <div className={advertStyles.text_div}>
-            <div className={advertStyles.card}>
-              <h1 className={advertStyles.maintext}>Come Sew With Us</h1>
-              <p className={advertStyles.paragraph}>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui
-                quas soluta molestias eaque doloribus.
-              </p>
-              <a href='#' className={advertStyles.button}>
-                Sew With Us
-              </a>
-            </div>
-          </div>
-          <div className={advertStyles.image_div}>
-            <img
-              src='../images/princess.jpg'
-              alt='blue gown'
-              className={advertStyles.image}
-            />
-          </div>
-        </section>
-      </>
-    );
-}
+        </div>
+      </section>
+    </>
+  );
+};
 
-export default Advert
+export default Advert;
