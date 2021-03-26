@@ -1,20 +1,13 @@
 import { useRef } from 'react';
+import { Carousel } from 'react-bootstrap';
 import testimonialStyles from '../styles/Testimonial.module.scss';
 
 const Testimonial = () => {
-  const testimonial = useRef('');
+  const testimonial_container = useRef('');
   const testimonial_slide = useRef('');
   const dot = useRef('');
 
   let counter = 1;
-  // slideFun(counter);
-
-  // let timer = setInterval(autoSlide, 8000);
-
-  // const autoSlide = () => {
-  //   counter += 1;
-  //   slideFun(counter);
-  // }
 
   const toggleSlide = (n) => {
     counter += n;
@@ -92,14 +85,84 @@ const Testimonial = () => {
           <h1 className={testimonialStyles.header}>
             What Our Clients Are Saying
           </h1>
-          <div className={testimonialStyles.container}>
+          <Carousel
+            className={testimonialStyles.testimonial_slide}
+            nextIcon={
+              <svg
+                width='75'
+                height='108'
+                className={testimonialStyles.next}
+                viewBox='0 0 75 108'
+                fill='none'
+                xmlns='http://www.w3.org/2000/svg'
+              >
+                <path d='M1 106.5L72 58.5L1 2' stroke='black' strokeWidth='3' />
+              </svg>
+            }
+            prevIcon={
+              <svg
+                width='75'
+                height='108'
+                className={testimonialStyles.prev}
+                viewBox='0 0 75 108'
+                fill='none'
+                xmlns='http://www.w3.org/2000/svg'
+              >
+                <path
+                  d='M74 106.5L3 58.5L74 2'
+                  stroke='black'
+                  strokeWidth='3'
+                />
+              </svg>
+            }
+          >
+            <Carousel.Item>
+              <div className={testimonialStyles.testimonial_div}>
+                <p className={testimonialStyles.paragraph}>
+                  Ipsum dolor sit amet consectetur adipisicing elit. Fuga
+                  perferendis maiores, ipsam accusantium quidem accusamus itaque
+                  molestias a atque minus dolore, aperiam cumque impedit odio
+                  facilis suscipit at neque eaque.
+                </p>
+                <h5 className={testimonialStyles.name}>Korede O,</h5>
+                <small className={testimonialStyles.state}>Osogbo</small>
+              </div>
+            </Carousel.Item>
+            <Carousel.Item>
+              <div className={testimonialStyles.testimonial_div}>
+                <p className={testimonialStyles.paragraph}>
+                  Dolor sit amet consectetur adipisicing elit. Fuga perferendis
+                  maiores, ipsam accusantium quidem accusamus itaque molestias a
+                  atque minus dolore, aperiam cumque impedit odio facilis
+                  suscipit at neque eaque.
+                </p>
+                <h5 className={testimonialStyles.name}>Stephen O,</h5>
+                <small className={testimonialStyles.state}>Abuja</small>
+              </div>
+            </Carousel.Item>
+            <Carousel.Item>
+              <div className={testimonialStyles.testimonial_div}>
+                <p className={testimonialStyles.paragraph}>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
+                  perferendis maiores, ipsam accusantium quidem accusamus itaque
+                  molestias a atque minus dolore, aperiam cumque impedit odio
+                  facilis suscipit at neque eaque.
+                </p>
+                <h5 className={testimonialStyles.name}>Joy O,</h5>
+                <small className={testimonialStyles.state}>Lagos</small>
+              </div>
+            </Carousel.Item>
+          </Carousel>
+          {/* <div
+            className={testimonialStyles.container}
+            ref={testimonial_container}
+          >
             <div
               className={testimonialStyles.testimonial_slide}
               ref={testimonial_slide}
             >
               <div
                 className={testimonialStyles.testimonial_div}
-                ref={testimonial}
               >
                 <p className={testimonialStyles.paragraph}>
                   Ipsum dolor sit amet consectetur adipisicing elit. Fuga
@@ -110,10 +173,7 @@ const Testimonial = () => {
                 <h5 className={testimonialStyles.name}>Korede O,</h5>
                 <small className={testimonialStyles.state}>Osogbo</small>
               </div>
-              <div
-                className={testimonialStyles.testimonial_div}
-                ref={testimonial}
-              >
+              <div className={testimonialStyles.testimonial_div}>
                 <p className={testimonialStyles.paragraph}>
                   Dolor sit amet consectetur adipisicing elit. Fuga perferendis
                   maiores, ipsam accusantium quidem accusamus itaque molestias a
@@ -123,10 +183,7 @@ const Testimonial = () => {
                 <h5 className={testimonialStyles.name}>Stephen O,</h5>
                 <small className={testimonialStyles.state}>Abuja</small>
               </div>
-              <div
-                className={testimonialStyles.testimonial_div}
-                ref={testimonial}
-              >
+              <div className={testimonialStyles.testimonial_div}>
                 <p className={testimonialStyles.paragraph}>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
                   perferendis maiores, ipsam accusantium quidem accusamus itaque
@@ -139,9 +196,10 @@ const Testimonial = () => {
             </div>
             <div className={testimonialStyles.dots_div} ref={dot}>
               <span
-                className={[testimonialStyles.dot, testimonialStyles.active].join(
-                  ' '
-                )}
+                className={[
+                  testimonialStyles.dot,
+                  testimonialStyles.active,
+                ].join(' ')}
                 onClick={() => currentSlide(1)}
               ></span>
               <span
@@ -153,9 +211,9 @@ const Testimonial = () => {
                 onClick={() => currentSlide(3)}
               ></span>
             </div>
-          </div>
+          </div> */}
         </div>
-        <svg
+        {/* <svg
           width='75'
           height='108'
           className={testimonialStyles.prev}
@@ -177,7 +235,7 @@ const Testimonial = () => {
           xmlns='http://www.w3.org/2000/svg'
         >
           <path d='M1 106.5L72 58.5L1 2' stroke='black' strokeWidth='3' />
-        </svg>
+        </svg> */}
       </section>
     </>
   );

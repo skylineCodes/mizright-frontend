@@ -56,10 +56,22 @@
             margin-bottom: 0px;
         }
 
-        .container {
+        // .container {
 
          .testimonial_slide {
             display: flex;
+            // background: #000;
+
+            ol {
+                li {
+                    background: #404145;
+                    width: 15px;
+                    height: 15px;
+                    border: 2px solid #404145;
+                    border-radius: 50%;
+                    margin: 0 10px;
+                }
+            }
 
             .testimonial_div {
                 display: flex;
@@ -128,7 +140,7 @@
                 background: #404145;
             }
         }
-       }
+    //    }
     }
 }
 
