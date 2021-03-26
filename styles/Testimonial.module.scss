@@ -73,6 +73,9 @@
                 }
             }
 
+            // .carousel-item {
+                // background: chocolate;
+
             .testimonial_div {
                 display: flex;
                 flex-direction: column;
@@ -92,7 +95,7 @@
                     text-align: center;
                     letter-spacing: 0.02em;
                     color: #404145;
-                    margin-bottom: 0px;
+                    margin-bottom: 2rem;
                 }
 
                 .name {
@@ -103,7 +106,7 @@
                     text-align: center;
                     letter-spacing: 0.02em;
                     color: #404145;
-                    margin-bottom: 0px;
+                    margin-bottom: 5px;
                 }
 
                 .state {
@@ -117,6 +120,7 @@
                     margin-bottom: 0px;
                 }
             }
+            // }
         }
 
         .dots_div {

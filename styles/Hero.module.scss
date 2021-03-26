@@ -89,6 +89,7 @@
                 color: #fff;
                 border-radius: 10px;
                 position: relative;
+                transition: .5s;
                 opacity: 0;
                 animation: fade-in-down ease-in .5s 1.5s forwards;
 
@@ -101,6 +102,12 @@
                     left: 5px;
                     right: 5px;
                     border: 4px solid #fff;
+                    border-radius: 10px;
+                }
+
+                &:hover {
+                    background: #af0424;
+                    transition: .5s;
                 }
             }
         }
