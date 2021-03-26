@@ -4,6 +4,7 @@ import Feature from '../components/Feature';
 import HowItWorks from '../components/HowItWorks';
 import Service from '../components/Service';
 import Advert from '../components/Advert';
+import Testimonial from '../components/Testimonial';
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <HowItWorks />
       <Service />
       <Advert />
+      <Testimonial />
     </>
   );
 }

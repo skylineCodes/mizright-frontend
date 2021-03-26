@@ -16,7 +16,7 @@ const Service = () => {
             d='M1366 1L1 1651M1366 122.624L95.3431 1651M1366 258.706L182.887 1651M1366 379.479L280.63 1651'
             stroke='#C4C4C4'
             stroke-opacity='0.5'
-            stroke-width='2'
+            strokeWidth='2'
           />
         </svg>
 
