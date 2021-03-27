@@ -5,6 +5,7 @@ import HowItWorks from '../components/HowItWorks';
 import Service from '../components/Service';
 import Advert from '../components/Advert';
 import Testimonial from '../components/Testimonial';
+import LatestBlogs from '../components/LatestBlogs';
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Service />
       <Advert />
       <Testimonial />
+      <LatestBlogs />
     </>
   );
 }

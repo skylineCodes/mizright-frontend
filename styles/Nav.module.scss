@@ -10,12 +10,13 @@
     .logo {
         display: flex;
         flex-direction: row;
-        padding: 0rem 1rem;
+        padding: 1rem 1rem;
         width: 10%;
 
         a {
             text-decoration: none;
             color: #000;
+            font-family: Lato;
         }
     }
 
@@ -31,6 +32,7 @@
             margin: auto 2rem;
             list-style: none;
             font-size: 18px;
+            font-family: Lato;
             align-items: center;
             text-align: center;
             letter-spacing: 0.02em;
@@ -114,7 +116,8 @@
             a {
                 padding: .5rem 2rem;
                 color: #CD0327;
-                border: solid;
+                border: 3px solid #CD0327;
+                border-radius: 4px;
                 transition: .5s;
                 cursor: pointer;
                 text-decoration: none;
@@ -122,15 +125,9 @@
                 &:hover {
                     color: #fff;
                     background: #CD0327;
-                    border: solid;
+                    border: 3px solid #CD0327;;
                 }
             }
-
-            // &:hover {
-            //     color: #fff;
-            //     background: #CD0327;
-            //     transition: .5s;
-            // }
         }
 
         .nav_buttons {
@@ -139,6 +136,7 @@
             list-style: none;
             margin: auto 2rem;
             font-size: 18px;
+            font-family: Lato;
             align-items: center;
             text-align: center;
             letter-spacing: 0.02em;
@@ -162,6 +160,7 @@
             line-height: 70px;
             cursor: pointer;
             font-size: 25px;
+            font-family: Lato;
         }
 
         .cancel{

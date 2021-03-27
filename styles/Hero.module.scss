@@ -32,6 +32,7 @@
 
             .item_title {
                 font-size: 38px;
+                font-family: Lato;
                 font-style: normal;
                 font-weight: bold;
                 line-height: 158.7%;
@@ -67,6 +68,7 @@
                 font-style: normal;
                 font-weight: normal;
                 font-size: 22px;
+                font-family: Lato;
                 line-height: 158.7%;
                 letter-spacing: 0.02em;
                 color: #6A6A6A;
@@ -76,7 +78,7 @@
 
             .item_btn {
                 background: #CD0327;
-                padding: 1rem 1.5rem;
+                padding: .7rem 1rem;
                 width: 40%;
                 line-height: 158.7%;
                 display: flex;
@@ -85,9 +87,10 @@
                 text-align: center;
                 letter-spacing: 0.02em;
                 font-size: 22px;
+                font-family: Lato;
                 text-decoration: none;
                 color: #fff;
-                border-radius: 10px;
+                border-radius: 4px;
                 position: relative;
                 transition: .5s;
                 opacity: 0;
@@ -101,8 +104,8 @@
                     bottom: 5px;
                     left: 5px;
                     right: 5px;
-                    border: 4px solid #fff;
-                    border-radius: 10px;
+                    border: 3px solid #fff;
+                    border-radius: 4px;
                 }
 
                 &:hover {
