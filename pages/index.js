@@ -6,6 +6,7 @@ import Service from '../components/Service';
 import Advert from '../components/Advert';
 import Testimonial from '../components/Testimonial';
 import LatestBlogs from '../components/LatestBlogs';
+import Footer from '../components/Footer';
 
 export default function Home() {
   return (
@@ -16,12 +17,12 @@ export default function Home() {
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
       </Head>
       <Hero />
-      {/* <Feature /> */}
       <HowItWorks />
       <Service />
       <Advert />
       <Testimonial />
       <LatestBlogs />
+      <Footer />
     </>
   );
 }
