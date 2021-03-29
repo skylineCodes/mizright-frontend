@@ -12,10 +12,10 @@ const Nav = () => {
     const toggleNavBar = (value) => {
       if (window.matchMedia('(max-width: 989px)').matches && value === 'open') {
         nav.current.style.display = 'block';
-        nav.current.style.transition = 'all linear .3s';
+        nav.current.style.transition = '5s';
         barIcon.current.style.display = 'none';
         timesIcon.current.style.display = 'block';
-        timesIcon.current.style.transition = 'display 20s ease 10s';
+        timesIcon.current.style.transition = '10s';
       } else {
         nav.current.style.transition = '';
         nav.current.style.display = '';
