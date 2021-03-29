@@ -6,7 +6,7 @@ import serviceStyles from '../styles/Service.module.scss';
 const Service = () => {
 
   useEffect(() => {
-    Aos.init({ offset: 400, duration: 2000 });
+    Aos.init({ offset: 10, mirror: true, duration: 1000 });
   }, []);
 
   return (
@@ -28,17 +28,17 @@ const Service = () => {
           />
         </svg>
 
-        <div data-aos='fade-up' className={serviceStyles.svg}>
+        <div data-aos='zoom-in' className={serviceStyles.svg}>
           <img
             src='../images/dress.png'
             alt='dress'
             className={serviceStyles.image}
           />
         </div>
-        <div data-aos='fade-up' className={serviceStyles.section_header}>
+        <div data-aos='zoom-in' className={serviceStyles.section_header}>
           <h1 className={serviceStyles.mainText}>Our Services</h1>
           <p className={serviceStyles.subText}>
-            We pay detailed attention to deliverying our services
+            We give you realistic deadlines and deliver within time frame
           </p>
         </div>
         <div data-aos='fade-right' className={serviceStyles.serviceone}>

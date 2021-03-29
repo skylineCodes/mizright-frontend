@@ -6,28 +6,32 @@ import howItWorksStyles from '../styles/HowItWorks.module.scss';
 const HowItWorks = () => {
 
   useEffect(() => {
-    Aos.init({ offset: 400, duration: 2000 });
+    Aos.init({ offset: 10, mirror: true, duration: 1000 });
   }, []);
 
   return (
     <>
       <section className={howItWorksStyles.howItWorks}>
-        <div data-aos='fade-up' className={howItWorksStyles.svg}>
+        <div
+          data-aos='zoom-in'
+          className={howItWorksStyles.svg}
+        >
           <img
             src='../images/thread.png'
             alt='thread'
             className={howItWorksStyles.image}
           />
         </div>
-        <div data-aos='fade-up' className={howItWorksStyles.section_header}>
+        <div data-aos='zoom-in' className={howItWorksStyles.section_header}>
           <h1 className={howItWorksStyles.mainText}>
             Three Steps to a better outfit
           </h1>
           <p className={howItWorksStyles.subText}>
-            Enjoy free pick up and delivery on all alterations
+            Enjoy free pick up and delivery on all alteration complaints within
+            seven days
           </p>
         </div>
-        <div data-aos='fade-up' className={howItWorksStyles.container}>
+        <div data-aos='zoom-in' className={howItWorksStyles.container}>
           <div className={howItWorksStyles.stepone}>
             <div className={howItWorksStyles.image_div}>
               <img
@@ -38,8 +42,8 @@ const HowItWorks = () => {
             </div>
             <div className={howItWorksStyles.text_div}>
               <p className={howItWorksStyles.text}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet
-                scelerisque ornare sagittis, eleifend.
+                Fill our easy to use interactive form to choose your desired
+                outfit and adequate measurements that we follow to details
               </p>
             </div>
           </div>
@@ -53,8 +57,8 @@ const HowItWorks = () => {
             </div>
             <div className={howItWorksStyles.text_div}>
               <p className={howItWorksStyles.text}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet
-                scelerisque ornare sagittis, eleifend.
+                You can make a 60% upfront payment upon ordering, and pay the
+                rest when clothe is ready for delivery
               </p>
             </div>
           </div>
@@ -68,13 +72,13 @@ const HowItWorks = () => {
             </div>
             <div className={howItWorksStyles.text_div}>
               <p className={howItWorksStyles.text}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet
-                scelerisque ornare sagittis, eleifend.
+                Your clothes would be delivered to your preferred address or you
+                opt for a pickup station near you.
               </p>
             </div>
           </div>
         </div>
-        <div data-aos='fade-up' className={howItWorksStyles.learnmore_div}>
+        <div data-aos='zoom-in' className={howItWorksStyles.learnmore_div}>
           <a href='#' className={howItWorksStyles.learnmore_button}>
             Learn More
           </a>

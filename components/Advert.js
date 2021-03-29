@@ -11,7 +11,7 @@ import advertStyles from '../styles/Advert.module.scss';
 
 const Advert = () => {
   useEffect(() => {
-    Aos.init({ offset: 400, duration: 1000 });
+    Aos.init({ offset: 100, mirror: true, duration: 1000 });
   }, []);
   return (
     <>

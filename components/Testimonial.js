@@ -7,7 +7,7 @@ import testimonialStyles from '../styles/Testimonial.module.scss';
 const Testimonial = () => {
 
   useEffect(() => {
-    Aos.init({ offset: 400, duration: 1000 });
+    Aos.init({ offset: 10, mirror: true, duration: 1000 });
   }, []);
 
   const testimonial_container = useRef('');
@@ -88,7 +88,7 @@ const Testimonial = () => {
             strokeWidth='2'
           />
         </svg>
-        <div data-aos='fade-in' className={testimonialStyles.section}>
+        <div data-aos='zoom-in' className={testimonialStyles.section}>
           <h1 className={testimonialStyles.header}>
             What Our Clients Are Saying
           </h1>

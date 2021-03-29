@@ -24,7 +24,7 @@ const Hero = () => {
           <main className={heroStyles.main}>
             <div className={heroStyles.text}>
               <h1 className={heroStyles.item_title}>
-                Sew Perfectly Tailored Outfits in 3 steps
+                Sew Well Tailored Outfits in <span className={heroStyles.span}>3 simple steps</span>
               </h1>
               <div className={heroStyles.scissors_div}>
                 <img
@@ -53,8 +53,7 @@ const Hero = () => {
                 </svg>
               </div>
               <p className={heroStyles.item_description}>
-                Get your outfit tailored to your personality at affordable
-                prices.
+                We sew coutures and ready made fabrics tailored to your taste.
               </p>
               <a href='#' className={heroStyles.item_btn}>
                 Sew With Us
@@ -62,7 +61,7 @@ const Hero = () => {
             </div>
             <div className={heroStyles.image_div}>
               <img
-                src='../images/giwa.png'
+                src='../images/blouse2.png'
                 alt='fashion'
                 className={heroStyles.image}
               />
