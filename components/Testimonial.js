@@ -1,8 +1,15 @@
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 import { Carousel } from 'react-bootstrap';
 import testimonialStyles from '../styles/Testimonial.module.scss';
 
 const Testimonial = () => {
+
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   const testimonial_container = useRef('');
   const testimonial_slide = useRef('');
   const dot = useRef('');
@@ -81,7 +88,7 @@ const Testimonial = () => {
             strokeWidth='2'
           />
         </svg>
-        <div className={testimonialStyles.section}>
+        <div data-aos='fade-in' className={testimonialStyles.section}>
           <h1 className={testimonialStyles.header}>
             What Our Clients Are Saying
           </h1>

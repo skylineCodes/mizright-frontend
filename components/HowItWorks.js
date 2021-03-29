@@ -1,13 +1,25 @@
+import { useEffect } from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 import howItWorksStyles from '../styles/HowItWorks.module.scss';
 
 const HowItWorks = () => {
+
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   return (
     <>
       <section className={howItWorksStyles.howItWorks}>
-        <div className={howItWorksStyles.svg}>
-          <img src='../images/thread.png' alt='thread' className={howItWorksStyles.image} />
+        <div data-aos='fade-up' className={howItWorksStyles.svg}>
+          <img
+            src='../images/thread.png'
+            alt='thread'
+            className={howItWorksStyles.image}
+          />
         </div>
-        <div className={howItWorksStyles.section_header}>
+        <div data-aos='fade-up' className={howItWorksStyles.section_header}>
           <h1 className={howItWorksStyles.mainText}>
             Three Steps to a better outfit
           </h1>
@@ -15,10 +27,14 @@ const HowItWorks = () => {
             Enjoy free pick up and delivery on all alterations
           </p>
         </div>
-        <div className={howItWorksStyles.container}>
+        <div data-aos='fade-up' className={howItWorksStyles.container}>
           <div className={howItWorksStyles.stepone}>
             <div className={howItWorksStyles.image_div}>
-              <img src="../images/book.png" alt="book" className={howItWorksStyles.image} />
+              <img
+                src='../images/book.png'
+                alt='book'
+                className={howItWorksStyles.image}
+              />
             </div>
             <div className={howItWorksStyles.text_div}>
               <p className={howItWorksStyles.text}>
@@ -29,7 +45,11 @@ const HowItWorks = () => {
           </div>
           <div className={howItWorksStyles.steptwo}>
             <div className={howItWorksStyles.image_div}>
-              <img src="../images/buy.png" alt="buy" className={howItWorksStyles.image} />
+              <img
+                src='../images/buy.png'
+                alt='buy'
+                className={howItWorksStyles.image}
+              />
             </div>
             <div className={howItWorksStyles.text_div}>
               <p className={howItWorksStyles.text}>
@@ -40,7 +60,11 @@ const HowItWorks = () => {
           </div>
           <div className={howItWorksStyles.stepthree}>
             <div className={howItWorksStyles.image_div}>
-              <img src="../images/delivery.png" alt="delivery" className={howItWorksStyles.image} />
+              <img
+                src='../images/delivery.png'
+                alt='delivery'
+                className={howItWorksStyles.image}
+              />
             </div>
             <div className={howItWorksStyles.text_div}>
               <p className={howItWorksStyles.text}>
@@ -50,7 +74,7 @@ const HowItWorks = () => {
             </div>
           </div>
         </div>
-        <div className={howItWorksStyles.learnmore_div}>
+        <div data-aos='fade-up' className={howItWorksStyles.learnmore_div}>
           <a href='#' className={howItWorksStyles.learnmore_button}>
             Learn More
           </a>

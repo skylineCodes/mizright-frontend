@@ -1,6 +1,14 @@
+import { useEffect } from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 import serviceStyles from '../styles/Service.module.scss';
 
 const Service = () => {
+
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   return (
     <>
       <section className={serviceStyles.services}>
@@ -20,20 +28,20 @@ const Service = () => {
           />
         </svg>
 
-        <div className={serviceStyles.svg}>
+        <div data-aos='fade-up' className={serviceStyles.svg}>
           <img
             src='../images/dress.png'
             alt='dress'
             className={serviceStyles.image}
           />
         </div>
-        <div className={serviceStyles.section_header}>
+        <div data-aos='fade-up' className={serviceStyles.section_header}>
           <h1 className={serviceStyles.mainText}>Our Services</h1>
           <p className={serviceStyles.subText}>
             We pay detailed attention to deliverying our services
           </p>
         </div>
-        <div className={serviceStyles.serviceone}>
+        <div data-aos='fade-right' className={serviceStyles.serviceone}>
           <div className={serviceStyles.card}>
             <h3 className={serviceStyles.card_header}>Coutures</h3>
             <ul className={serviceStyles.card_list}>
@@ -102,7 +110,7 @@ const Service = () => {
           <div className={serviceStyles.image}></div>
         </div>
 
-        <div className={serviceStyles.servicetwo}>
+        <div data-aos='fade-left' className={serviceStyles.servicetwo}>
           <div className={serviceStyles.card}>
             <h3 className={serviceStyles.card_header}>Ready to wear</h3>
             <ul className={serviceStyles.card_list}>
