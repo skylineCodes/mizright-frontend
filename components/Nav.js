@@ -51,10 +51,20 @@ const Nav = () => {
             <FontAwesomeIcon icon={faTimes} />
           </span>
         </label>
+        <ul className={navStyles.nav_buttons_mobile}>
+          <li className={navStyles.nav_penultimate_item} onClick={toggleLink}>
+            <Link href='#'>Log In</Link>
+          </li>
+          <li className={navStyles.nav_last_item} onClick={toggleLink}>
+            <Link href='#'>Sign Up</Link>
+          </li>
+        </ul>
         <nav ref={nav} className={navStyles.nav}>
           <ul className={navStyles.nav_list}>
             <li className={navStyles.nav_item} onClick={toggleLink}>
-              <Link href='#' className={navStyles.a}>How It Works</Link>
+              <Link href='#' className={navStyles.a}>
+                How It Works
+              </Link>
             </li>
             <li className={navStyles.nav_item} onClick={toggleLink}>
               <Link href='#'>Our Collections</Link>
