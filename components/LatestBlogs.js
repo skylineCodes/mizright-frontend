@@ -1,12 +1,18 @@
-import React from 'react';
+import { useEffect } from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 import latestBlogsStyles from '../styles/LatestBlogs.module.scss';
 
 const LatestBlogs = () => {
+  useEffect(() => {
+    Aos.init({ offset: 400, duration: 1000 });
+  }, []);
+
     return (
       <>
         <section className={latestBlogsStyles.latestblogs}>
           <div className={latestBlogsStyles.container}>
-            <div className={latestBlogsStyles.header_div}>
+            <div data-aos='fade-up' className={latestBlogsStyles.header_div}>
               <h1 className={latestBlogsStyles.header}>Latest Blogs</h1>
               <div className={latestBlogsStyles.more_article_div}>
                 <a href='#' className={latestBlogsStyles.more_article_link}>
@@ -30,7 +36,7 @@ const LatestBlogs = () => {
                 </a>
               </div>
             </div>
-            <div className={latestBlogsStyles.article_div}>
+            <div data-aos='fade-up' className={latestBlogsStyles.article_div}>
               <div className={latestBlogsStyles.card}>
                 <div className={latestBlogsStyles.image_div}>
                   <img

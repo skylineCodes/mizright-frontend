@@ -1,13 +1,23 @@
+import { useEffect } from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMoneyBill, faTshirt, faWrench } from '@fortawesome/free-solid-svg-icons';
+import {
+  faMoneyBill,
+  faTshirt,
+  faWrench,
+} from '@fortawesome/free-solid-svg-icons';
 import advertStyles from '../styles/Advert.module.scss';
 
 const Advert = () => {
+  useEffect(() => {
+    Aos.init({ offset: 400, duration: 1000 });
+  }, []);
   return (
     <>
       <section className={advertStyles.advert}>
         <div className={advertStyles.text_div}>
-          <div className={advertStyles.section_header}>
+          <div data-aos='fade-right' className={advertStyles.section_header}>
             <h1 className={advertStyles.mainText}>
               Sew Latest Contemporary styles from the comfort of your home
             </h1>
@@ -51,7 +61,7 @@ const Advert = () => {
             </ul>
           </div>
         </div>
-        <div className={advertStyles.image_div}>
+        <div data-aos='fade-left' className={advertStyles.image_div}>
           <img
             src='../images/princess.jpg'
             alt='blue gown'
