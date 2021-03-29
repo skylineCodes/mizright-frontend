@@ -6,7 +6,7 @@ import serviceStyles from '../styles/Service.module.scss';
 const Service = () => {
 
   useEffect(() => {
-    Aos.init({ duration: 2000 });
+    Aos.init({ offset: 400, duration: 2000 });
   }, []);
 
   return (

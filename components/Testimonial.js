@@ -7,7 +7,7 @@ import testimonialStyles from '../styles/Testimonial.module.scss';
 const Testimonial = () => {
 
   useEffect(() => {
-    Aos.init({ duration: 2000 });
+    Aos.init({ offset: 400, duration: 1000 });
   }, []);
 
   const testimonial_container = useRef('');
