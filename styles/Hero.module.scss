@@ -1,7 +1,8 @@
 .hero {
     width: 100vw;
-    height: 70vh;
+    height: auto;
     overflow: hidden;
+    position: relative;
 
     .svg {
         position: absolute;
@@ -135,7 +136,7 @@
 
 @media only screen and (max-width: 1289px) {
 .hero {
-    height: inherit;
+    height: auto;
 
     .svg {
         display: none;
@@ -176,7 +177,7 @@
 
 @media only screen and (max-width: 1029px) {
     .hero {
-        height: inherit;
+        height: auto;
 
         .main {
             .image_div {
@@ -194,7 +195,7 @@
 
 @media only screen and (max-width: 989px) {
     .hero {
-        height: inherit;
+        height: auto;
 
         .main {
 
@@ -246,7 +247,7 @@
 
 @media only screen and (max-width: 703px) {
     .hero {
-        height: inherit;
+        height: auto;
 
         .main {
 
@@ -302,7 +303,7 @@
 
 @media only screen and (max-width: 480px) {
     .hero {
-        height: 90vh;
+        height: auto;
 
         .main {
             display: grid;
@@ -366,7 +367,7 @@
 
 @media only screen and (max-width: 398px) {
     .hero {
-        height: 100vh;
+        height: auto;
 
         .main {
             display: grid;
@@ -430,7 +431,7 @@
 
 @media only screen and (max-width: 325px) {
     .hero {
-        height: 100vh;
+        height: auto;
 
         .main {
 

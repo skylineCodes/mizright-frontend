@@ -285,6 +285,78 @@
             font-size: 25px;
         }
 
+        .nav_buttons_mobile {
+            display: flex;
+            position: absolute;
+            top: 0;
+            right: 40px;
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            margin: auto 2rem;
+            font-size: 18px;
+            font-family: Lato;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 0.02em;
+            line-height: 70px;
+            font-style: normal;
+            font-weight: normal;
+
+            .nav_penultimate_item {
+                padding: 0rem 1.5rem;
+
+                a {
+                    text-decoration: none;
+                    color: #404145;
+                    position: relative;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        z-index: 0;
+                        left: 0;
+                        right: 100%;
+                        top: 2.1rem;
+                        background: #CD0327;
+                        height: 2px;
+                        -webkit-transition-property: right;
+                        transition-property: right;
+                        -webkit-transition-duration: 0.2s;
+                        transition-duration: 0.2s;
+                        -webkit-transition-timing-function: ease-out;
+                        transition-timing-function: ease-out;
+                    }
+
+                    &:hover::before {
+                        right: 0 !important;
+                    }
+
+                    &:hover {                    
+                        color: #CD0327;
+                    }
+                }
+            }
+
+            .nav_last_item {
+                a {
+                    padding: .3rem 1rem;
+                    color: #CD0327;
+                    border: 3px solid #CD0327;
+                    border-radius: 4px;
+                    transition: .5s;
+                    cursor: pointer;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: #fff;
+                        background: #CD0327;
+                        border: 3px solid #CD0327;;
+                    }
+                }
+            }
+        }
+
         .cancel{
             display: none;
         }
