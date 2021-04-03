@@ -78,7 +78,7 @@ const HowItWorks = () => {
             </div>
           </div>
         </div>
-        <div data-aos='zoom-in' className={howItWorksStyles.learnmore_div}>
+        <div className={howItWorksStyles.learnmore_div}>
           <a href='#' className={howItWorksStyles.learnmore_button}>
             Learn More
           </a>
