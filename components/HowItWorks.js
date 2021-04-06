@@ -13,7 +13,7 @@ const HowItWorks = () => {
     <>
       <section className={howItWorksStyles.howItWorks}>
         <div
-          data-aos='zoom-in'
+         
           className={howItWorksStyles.svg}
         >
           <img
@@ -22,7 +22,7 @@ const HowItWorks = () => {
             className={howItWorksStyles.image}
           />
         </div>
-        <div data-aos='zoom-in' className={howItWorksStyles.section_header}>
+        <div className={howItWorksStyles.section_header}>
           <h1 className={howItWorksStyles.mainText}>
             Three Steps to a better outfit
           </h1>
@@ -31,7 +31,7 @@ const HowItWorks = () => {
             seven days
           </p>
         </div>
-        <div data-aos='zoom-in' className={howItWorksStyles.container}>
+        <div className={howItWorksStyles.container}>
           <div className={howItWorksStyles.stepone}>
             <div className={howItWorksStyles.image_div}>
               <img

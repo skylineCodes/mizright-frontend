@@ -28,20 +28,20 @@ const Service = () => {
           />
         </svg>
 
-        <div data-aos='zoom-in' className={serviceStyles.svg}>
+        <div className={serviceStyles.svg}>
           <img
             src='../images/dress.png'
             alt='dress'
             className={serviceStyles.image}
           />
         </div>
-        <div data-aos='zoom-in' className={serviceStyles.section_header}>
+        <div className={serviceStyles.section_header}>
           <h1 className={serviceStyles.mainText}>Our Services</h1>
           <p className={serviceStyles.subText}>
             We give you realistic deadlines and deliver within time frame
           </p>
         </div>
-        <div data-aos='fade-right' className={serviceStyles.serviceone}>
+        <div className={serviceStyles.serviceone}>
           <div className={serviceStyles.card}>
             <h3 className={serviceStyles.card_header}>Coutures</h3>
             <ul className={serviceStyles.card_list}>
@@ -110,7 +110,7 @@ const Service = () => {
           <div className={serviceStyles.image}></div>
         </div>
 
-        <div data-aos='fade-left' className={serviceStyles.servicetwo}>
+        <div className={serviceStyles.servicetwo}>
           <div className={serviceStyles.card}>
             <h3 className={serviceStyles.card_header}>Ready to wear</h3>
             <ul className={serviceStyles.card_list}>

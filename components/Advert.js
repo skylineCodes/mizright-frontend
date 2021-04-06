@@ -17,7 +17,7 @@ const Advert = () => {
     <>
       <section className={advertStyles.advert}>
         <div className={advertStyles.text_div}>
-          <div data-aos='fade-right' className={advertStyles.section_header}>
+          <div className={advertStyles.section_header}>
             <h1 className={advertStyles.mainText}>
               Sew Latest Contemporary styles from the comfort of your home
             </h1>
@@ -61,7 +61,7 @@ const Advert = () => {
             </ul>
           </div>
         </div>
-        <div data-aos='fade-left' className={advertStyles.image_div}>
+        <div className={advertStyles.image_div}>
           <img
             src='../images/princess.jpg'
             alt='blue gown'

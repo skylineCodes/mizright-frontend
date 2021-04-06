@@ -12,7 +12,7 @@ const LatestBlogs = () => {
       <>
         <section className={latestBlogsStyles.latestblogs}>
           <div className={latestBlogsStyles.container}>
-            <div data-aos='fade-up' className={latestBlogsStyles.header_div}>
+            <div className={latestBlogsStyles.header_div}>
               <h1 className={latestBlogsStyles.header}>Latest Blogs</h1>
               <div className={latestBlogsStyles.more_article_div}>
                 <a href='#' className={latestBlogsStyles.more_article_link}>
@@ -36,7 +36,7 @@ const LatestBlogs = () => {
                 </a>
               </div>
             </div>
-            <div data-aos='fade-up' className={latestBlogsStyles.article_div}>
+            <div className={latestBlogsStyles.article_div}>
               <div className={latestBlogsStyles.card}>
                 <div className={latestBlogsStyles.image_div}>
                   <img

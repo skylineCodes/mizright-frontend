@@ -88,7 +88,7 @@ const Testimonial = () => {
             strokeWidth='2'
           />
         </svg>
-        <div data-aos='zoom-in' className={testimonialStyles.section}>
+        <div className={testimonialStyles.section}>
           <h1 className={testimonialStyles.header}>
             What Our Clients Are Saying
           </h1>
