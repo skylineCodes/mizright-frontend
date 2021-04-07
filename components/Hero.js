@@ -1,4 +1,4 @@
-import React from 'react';
+import Link from 'next/link';
 import heroStyles from '../styles/Hero.module.scss';
 
 const Hero = () => {
@@ -24,7 +24,8 @@ const Hero = () => {
           <main className={heroStyles.main}>
             <div className={heroStyles.text}>
               <h1 className={heroStyles.item_title}>
-                Sew Well Tailored Outfits in <span className={heroStyles.span}>3 simple steps</span>
+                Sew Well Tailored Outfits in{' '}
+                <span className={heroStyles.span}>3 simple steps</span>
               </h1>
               <div className={heroStyles.scissors_div}>
                 <img
@@ -55,9 +56,11 @@ const Hero = () => {
               <p className={heroStyles.item_description}>
                 We sew coutures and ready made fabrics tailored to your taste.
               </p>
-              <a href='#' className={heroStyles.item_btn}>
-                Sew With Us
-              </a>
+              <Link href="/booking">
+                <a href='' className={heroStyles.item_btn}>
+                  Sew With Us
+                </a>
+              </Link>
             </div>
             <div className={heroStyles.image_div}>
               <img

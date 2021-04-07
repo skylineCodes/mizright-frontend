@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import Link from 'next/link';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -59,6 +60,11 @@ const Advert = () => {
                 </p>
               </li>
             </ul>
+            <Link href='/booking'>
+              <a href='' className={advertStyles.item_btn}>
+                Sew With Us
+              </a>
+            </Link>
           </div>
         </div>
         <div className={advertStyles.image_div}>

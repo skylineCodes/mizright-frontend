@@ -1,12 +1,10 @@
 import Head from 'next/head';
 import Hero from '../components/Hero';
-import Feature from '../components/Feature';
 import HowItWorks from '../components/HowItWorks';
 import Service from '../components/Service';
 import Advert from '../components/Advert';
 import Testimonial from '../components/Testimonial';
 import LatestBlogs from '../components/LatestBlogs';
-import Footer from '../components/Footer';
 
 export default function Home() {
   return (
@@ -22,7 +20,6 @@ export default function Home() {
       <Advert />
       <Testimonial />
       <LatestBlogs />
-      <Footer />
     </>
   );
 }
