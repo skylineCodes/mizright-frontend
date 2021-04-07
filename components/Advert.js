@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
@@ -12,12 +11,10 @@ import {
 import advertStyles from '../styles/Advert.module.scss';
 
 const Advert = () => {
-  const router = useRouter();
-
   useEffect(() => {
     Aos.init({ offset: 100, mirror: true, duration: 1000 });
   }, []);
-  
+
   return (
     <>
       <section className={advertStyles.advert}>
@@ -64,15 +61,14 @@ const Advert = () => {
                 </p>
               </li>
             </ul>
-            {/* <Link href='/booking' scroll={true}> */}
+            <Link href='/booking' scroll={true}>
               <a
                 href=''
                 className={advertStyles.item_btn}
-                onClick={() => router.push('/booking')}
               >
                 Sew With Us
               </a>
-            {/* </Link> */}
+            </Link>
           </div>
         </div>
         <div className={advertStyles.image_div}>

@@ -1,10 +1,7 @@
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import heroStyles from '../styles/Hero.module.scss';
 
 const Hero = () => {
-  const router = useRouter();
-
   return (
     <>
       <section className={heroStyles.hero}>
@@ -59,15 +56,14 @@ const Hero = () => {
               <p className={heroStyles.item_description}>
                 We sew coutures and ready made fabrics tailored to your taste.
               </p>
-              {/* <Link href='/booking'> */}
+              <Link href='/booking' scroll={false}>
                 <a
                   href=''
                   className={heroStyles.item_btn}
-                  onClick={() => router.push('/booking')}
                 >
                   Sew With Us
                 </a>
-              {/* </Link> */}
+              </Link>
             </div>
             <div className={heroStyles.image_div}>
               <img
