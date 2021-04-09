@@ -2,6 +2,9 @@
     display: flex;
     flex-direction: row;
     max-width: 120rem;
+    position: sticky;
+    background-color: #fff;
+    z-index: 1;
 
     .nav_buttons_mobile {
         display: none;

@@ -10,7 +10,7 @@
 
     .card {
         background: #fff;
-        width: 80vw;
+        width: auto;
         height: auto;
         margin: 4rem auto;
         border-radius: 10px;
@@ -162,6 +162,7 @@
                 .div_one {
                     display: grid;
                     grid-template-columns: repeat(4, 1fr);
+                    justify-content: space-between;
                     padding-bottom: 1.5rem;
 
                     .cloth_type {
@@ -254,6 +255,7 @@
                             position: absolute;
                             top: 18px;
                             left: 95%;
+                            cursor: pointer;
 
                             .upload_icon {
                                 font-size: 1.4rem;
@@ -343,6 +345,7 @@
                 .div_two {
                     display: grid;
                     grid-template-columns: repeat(4, 1fr);
+                    justify-content: space-between;
                     padding-bottom: 1.5rem;
 
                     .cloth_type {
@@ -435,6 +438,7 @@
                             position: absolute;
                             top: 18px;
                             left: 95%;
+                            cursor: pointer;
 
                             .upload_icon {
                                 font-size: 1.4rem;
@@ -524,6 +528,7 @@
                 .div_three {
                     display: grid;
                     grid-template-columns: repeat(4, 1fr);
+                    justify-content: space-between;
                     padding-bottom: 1.5rem;
 
                     .cloth_type {
@@ -616,6 +621,7 @@
                             position: absolute;
                             top: 18px;
                             left: 95%;
+                            cursor: pointer;
 
                             .upload_icon {
                                 font-size: 1.4rem;
@@ -705,6 +711,7 @@
                 .div_four {
                     display: none;
                     grid-template-columns: repeat(4, 1fr);
+                    justify-content: space-between;
                     padding-bottom: 1.5rem;
 
                     .cloth_type {
@@ -797,6 +804,7 @@
                             position: absolute;
                             top: 18px;
                             left: 95%;
+                            cursor: pointer;
 
                             .upload_icon {
                                 font-size: 1.4rem;
@@ -886,6 +894,7 @@
                 .div_five {
                     display: none;
                     grid-template-columns: repeat(4, 1fr);
+                    justify-content: space-between;
                     padding-bottom: 1.5rem;
 
                     .cloth_type {
@@ -978,6 +987,7 @@
                             position: absolute;
                             top: 18px;
                             left: 95%;
+                            cursor: pointer;
 
                             .upload_icon {
                                 font-size: 1.4rem;
@@ -1073,7 +1083,6 @@
 
                     .add_button {
                         cursor: pointer;
-                        background: #ddd;
                         color: #6a6a6a;
                         padding: .6rem;
                         border-radius: 50%;
@@ -1136,4 +1145,163 @@
             }
         }
     }
+}
+
+@media only screen and (max-width: 1040px) {
+.booking {
+
+    .card_mobile {
+        background: #fff;
+        width: 100%;
+        height: 100vh;
+        margin: 1rem auto;
+        border-radius: 10px;
+
+        .card_mobile_header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 8rem;
+                width: 100%;
+                height: 1px;
+                background-color: #eee;
+            }
+
+            .card_mobile_icon {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                
+                .card_mobile_arrow_back {
+                    padding-bottom: 15px;
+                }
+
+                .card_mobile_header_div {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    width: 100%;
+                    padding-left: 15px;
+
+                    .card_mobile_header_text {
+                        font-size: 25px;
+                        font-style: normal;
+                        text-transform: capitalize;
+                        font-family: Lato;
+                        font-weight: 400;
+                        color: #000;
+                    }
+                }
+            }
+
+            .card_mobile_progress_bar {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-end;
+                position: relative;
+                padding-right: 20px;
+
+                .card_mobile_progress_bar_text {
+                    position: absolute;
+                    top: 32px;
+                    right: 35px;
+                    font-size: 17px;
+                    text-align: center;
+                    font-weight: 700;
+                    line-height: 16px;
+                }
+
+                .card_mobile_progress_bar_svg {
+                    width: 80px;
+                    height: 80px;
+
+                    .card_mobile_svg_circle {
+                        position: relative;
+                        display: inline-block;
+                        fill: none;
+                        stroke-width: 4px;
+                        stroke: #343035;
+                    }
+
+                    .card_mobile_svg_progress {
+                        fill: none;
+                        stroke-width: 4px;
+                        stroke: #CD0327;
+                        stroke-linecap: round;
+                        stroke-dasharray: 232.36;
+                        transform: rotate(-90deg);
+                        transform-origin: 50% 50%;
+                        stroke-dashoffset: 154;
+                        animation: two 3.5s ease-in-out, appear 2s;
+                    }
+                }
+            }
+        }
+
+        .card_mobile_body {
+            display: grid;
+            grid-template-columns: 1fr;
+
+            .card_mobile_div_one {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                margin: 2rem 0rem;
+                place-items: center;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 10rem;
+                    width: 100%;
+                    height: 1px;
+                    background-color: #eee;
+                }
+
+                .upload_image {
+                    .uploadInput {
+                        padding-top: 1.5rem;
+                        color: #6a6a6a;
+                        font-style: normal;
+                        text-transform: capitalize;
+                        font-weight: inherit;
+                        font-family: Lato;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    .card {
+        display: none;
+    }
+}
+}
+
+@keyframes two {
+  from {
+    stroke-dashoffset: 232.36;
+  }
+  to {
+    stroke-dashoffset: 154;
+  }
+}
+
+@keyframes appear {
+	0%, 50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }

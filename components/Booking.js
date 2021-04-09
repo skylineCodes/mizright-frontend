@@ -1,7 +1,23 @@
-import { useRef } from 'react';
+import { useState, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDown, faUpload, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { IconButton } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import { Button, TextField, InputBase, InputLabel } from '@material-ui/core';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+import { AddCircleOutline, KeyboardBackspace } from '@material-ui/icons';
+import { faAngleDown, faUpload } from '@fortawesome/free-solid-svg-icons';
 import bookingStyles from '../styles/Booking.module.scss';
+
+const useStyles = makeStyles((theme) => ({
+  formControl: {
+    margin: theme.spacing(1),
+    minWidth: 120,
+  },
+  selectEmpty: {
+    marginTop: theme.spacing(2),
+  },
+}));
 
 const Booking = () => {
   const hide = useRef("");
@@ -16,6 +32,46 @@ const Booking = () => {
   const uploadInputThree = useRef("");
   const uploadInputFour = useRef("");
   const uploadInputFive = useRef("");
+
+  const classes = useStyles();
+  const [state, setState] = useState({
+    cloth: '',
+    name: 'hai',
+  });
+
+  const handleClothChange = (event) => {
+    const name = event.target.name;
+    setState({
+      ...state,
+      [name]: event.target.value,
+    });
+  };
+  
+  const [quantityState, setQuantityState] = useState({
+    quantity: '',
+    name: 'hai',
+  });
+
+  const handleQuantityChange = (event) => {
+    const name = event.target.name;
+    setQuantityState({
+      ...state,
+      [name]: event.target.value,
+    });
+  };
+
+  const [logisticsState, setLogisticsState] = useState({
+    logistics: '',
+    name: 'hai',
+  });
+
+  const handleLogisticsChange = (event) => {
+    const name = event.target.name;
+    setLogisticsState({
+      ...state,
+      [name]: event.target.value,
+    });
+  };
 
   const openFileOne = () => {
     uploadOne.current.click();
@@ -92,6 +148,116 @@ const Booking = () => {
   return (
     <>
       <section className={bookingStyles.booking}>
+        <div className={bookingStyles.card_mobile}>
+          <div className={bookingStyles.card_mobile_header}>
+            <div className={bookingStyles.card_mobile_icon}>
+              <div className={bookingStyles.card_mobile_arrow_back}>
+                <IconButton>
+                  <KeyboardBackspace style={{ fontSize: 40, color: '#000' }} />
+                </IconButton>
+              </div>
+              <div className={bookingStyles.card_mobile_header_div}>
+                <h5 className={bookingStyles.card_mobile_header_text}>
+                  Fabric Details
+                </h5>
+              </div>
+            </div>
+            <div className={bookingStyles.card_mobile_progress_bar}>
+              <div className={bookingStyles.card_mobile_progress_bar_text}>
+                1 0f 3
+              </div>
+              <svg className={bookingStyles.card_mobile_progress_bar_svg}>
+                <circle
+                  className={bookingStyles.card_mobile_svg_circle}
+                  cx='40'
+                  cy='40'
+                  r='37'
+                ></circle>
+                <circle
+                  className={bookingStyles.card_mobile_svg_progress}
+                  cx='40'
+                  cy='40'
+                  r='37'
+                ></circle>
+              </svg>
+            </div>
+          </div>
+          <div className={bookingStyles.card_mobile_body}>
+            <div className={bookingStyles.card_mobile_div_one}>
+              <div className={bookingStyles.cloth_type}>
+                <FormControl className={classes.formControl}>
+                  <InputLabel htmlFor='age-native-simple'>
+                    Cloth Type
+                  </InputLabel>
+                  <Select
+                    native
+                    value={state.cloth}
+                    onChange={handleClothChange}
+                    inputProps={{
+                      name: 'cloth',
+                      id: 'age-native-simple',
+                    }}
+                  >
+                    <option aria-label='None' value='' />
+                    <option value={10}>Short Gown</option>
+                    <option value={20}>Long Gown</option>
+                    <option value={30}>Pant</option>
+                  </Select>
+                </FormControl>
+              </div>
+              <div className={bookingStyles.upload_image}>
+                <Button component='label' className={bookingStyles.uploadInput}>
+                  Upload Sample Image
+                  <input type='file' hidden />
+                </Button>
+              </div>
+              <div className={bookingStyles.quantity}>
+                <FormControl className={classes.formControl}>
+                  <InputLabel htmlFor='quantity-native-simple'>
+                    Quantity
+                  </InputLabel>
+                  <Select
+                    native
+                    value={quantityState.quantity}
+                    onChange={handleQuantityChange}
+                    inputProps={{
+                      name: 'quantity',
+                      id: 'quantity-native-simple',
+                    }}
+                  >
+                    <option aria-label='None' value='' />
+                    <option value={1}>1 {''}</option>
+                    <option value={2}>2 {''}</option>
+                    <option value={3}>3 {''}</option>
+                    <option value={4}>4 {''}</option>
+                    <option value={5}>5 {''}</option>
+                  </Select>
+                </FormControl>
+              </div>
+              <div className={bookingStyles.logistics}>
+                <FormControl className={classes.formControl}>
+                  <InputLabel htmlFor='logistics-native-simple'>
+                    Logistics
+                  </InputLabel>
+                  <Select
+                    native
+                    value={logisticsState.logistics}
+                    onChange={handleLogisticsChange}
+                    inputProps={{
+                      name: 'logistics',
+                      id: 'logistics-native-simple',
+                    }}
+                  >
+                    <option aria-label='None' value='' />
+                    <option value={1}>Sort fabric {''}</option>
+                    <option value={2}>I have fabric {''}</option>
+                  </Select>
+                </FormControl>
+              </div>
+            </div>
+          </div>
+          <div className={bookingStyles.card_mobile_footer}></div>
+        </div>
         <div className={bookingStyles.card}>
           <div className={bookingStyles.header}>
             <span className={bookingStyles.fabric_header}>Fabric Details</span>
@@ -622,13 +788,22 @@ const Booking = () => {
 
               <div ref={hideAddButton} className={bookingStyles.add_button_div}>
                 <div className={bookingStyles.add_button}>
-                  <FontAwesomeIcon
+                  <IconButton>
+                    <AddCircleOutline
+                      style={{ fontSize: 40 }}
+                      className={bookingStyles.add_button_icon}
+                      onClick={() => {
+                        hideDiv();
+                      }}
+                    />
+                  </IconButton>
+                  {/* <FontAwesomeIcon
                     icon={faPlus}
                     className={bookingStyles.add_button_icon}
                     onClick={() => {
                       hideDiv();
                     }}
-                  />
+                  /> */}
                 </div>
               </div>
             </div>
