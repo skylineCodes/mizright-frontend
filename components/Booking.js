@@ -13,15 +13,21 @@ const useStyles = makeStyles((theme) => ({
   formControl: {
     margin: theme.spacing(1),
     minWidth: 120,
+    width: '13rem'
   },
   selectEmpty: {
     marginTop: theme.spacing(2),
   },
+  quantityFormControl: {
+    width: '7rem',
+  }
 }));
 
 const Booking = () => {
   const hide = useRef("");
+  const hideMobile = useRef('');
   const hideAddButton = useRef('');
+  const hideMobileAddButton = useRef('');
   const uploadOne = useRef('');
   const uploadTwo = useRef('');
   const uploadThree = useRef('');
@@ -32,43 +38,205 @@ const Booking = () => {
   const uploadInputThree = useRef("");
   const uploadInputFour = useRef("");
   const uploadInputFive = useRef("");
+  const uploadMobileOne = useRef("");
+  const uploadMobileTwo = useRef("");
+  const uploadMobileThree = useRef("");
+  const uploadMobileFour = useRef("");
+  const uploadMobileFive = useRef('');
 
   const classes = useStyles();
-  const [state, setState] = useState({
+
+  const [clothStateOne, setClothStateOne] = useState({
     cloth: '',
     name: 'hai',
   });
 
-  const handleClothChange = (event) => {
+  const handleClothChangeOne = (event) => {
     const name = event.target.name;
-    setState({
-      ...state,
+    setClothStateOne({
+      ...clothStateOne,
+      [name]: event.target.value,
+    });
+  };
+
+  const [clothStateTwo, setClothStateTwo] = useState({
+    cloth: '',
+    name: 'hai',
+  });
+
+  const handleClothChangeTwo = (event) => {
+    const name = event.target.name;
+    setClothStateTwo({
+      ...clothStateTwo,
+      [name]: event.target.value,
+    });
+  };
+
+  const [clothStateThree, setClothStateThree] = useState({
+    cloth: '',
+    name: 'hai',
+  });
+
+  const handleClothChangeThree = (event) => {
+    const name = event.target.name;
+    setClothStateThree({
+      ...clothStateThree,
+      [name]: event.target.value,
+    });
+  };
+
+  const [clothStateFour, setClothStateFour] = useState({
+    cloth: '',
+    name: 'hai',
+  });
+
+  const handleClothChangeFour = (event) => {
+    const name = event.target.name;
+    setClothStateFour({
+      ...clothStateFour,
+      [name]: event.target.value,
+    });
+  };
+
+  const [clothStateFive, setClothStateFive] = useState({
+    cloth: '',
+    name: 'hai',
+  });
+
+  const handleClothChangeFive = (event) => {
+    const name = event.target.name;
+    setClothStateFive({
+      ...clothStateFive,
       [name]: event.target.value,
     });
   };
   
-  const [quantityState, setQuantityState] = useState({
+  const [quantityStateOne, setQuantityStateOne] = useState({
     quantity: '',
     name: 'hai',
   });
 
-  const handleQuantityChange = (event) => {
+  const handleQuantityChangeOne = (event) => {
     const name = event.target.name;
-    setQuantityState({
-      ...state,
+    setQuantityStateOne({
+      ...quantityStateOne,
       [name]: event.target.value,
     });
   };
 
-  const [logisticsState, setLogisticsState] = useState({
+  const [quantityStateTwo, setQuantityStateTwo] = useState({
+    quantity: '',
+    name: 'hai',
+  });
+
+  const handleQuantityChangeTwo = (event) => {
+    const name = event.target.name;
+    setQuantityStateTwo({
+      ...quantityStateTwo,
+      [name]: event.target.value,
+    });
+  };
+
+  const [quantityStateThree, setQuantityStateThree] = useState({
+    quantity: '',
+    name: 'hai',
+  });
+
+  const handleQuantityChangeThree = (event) => {
+    const name = event.target.name;
+    setQuantityStateThree({
+      ...quantityStateThree,
+      [name]: event.target.value,
+    });
+  };
+
+  const [quantityStateFour, setQuantityStateFour] = useState({
+    quantity: '',
+    name: 'hai',
+  });
+
+  const handleQuantityChangeFour = (event) => {
+    const name = event.target.name;
+    setQuantityStateFour({
+      ...quantityStateFour,
+      [name]: event.target.value,
+    });
+  };
+
+  const [quantityStateFive, setQuantityStateFive] = useState({
+    quantity: '',
+    name: 'hai',
+  });
+
+  const handleQuantityChangeFive = (event) => {
+    const name = event.target.name;
+    setQuantityStateFive({
+      ...quantityStateFive,
+      [name]: event.target.value,
+    });
+  };
+
+  const [logisticsStateOne, setLogisticsStateOne] = useState({
     logistics: '',
     name: 'hai',
   });
 
-  const handleLogisticsChange = (event) => {
+  const handleLogisticsChangeOne = (event) => {
     const name = event.target.name;
-    setLogisticsState({
-      ...state,
+    setLogisticsStateOne({
+      ...logisticsStateOne,
+      [name]: event.target.value,
+    });
+  };
+
+  const [logisticsStateTwo, setLogisticsStateTwo] = useState({
+    logistics: '',
+    name: 'hai',
+  });
+
+  const handleLogisticsChangeTwo = (event) => {
+    const name = event.target.name;
+    setLogisticsStateTwo({
+      ...logisticsStateTwo,
+      [name]: event.target.value,
+    });
+  };
+
+  const [logisticsStateThree, setLogisticsStateThree] = useState({
+    logistics: '',
+    name: 'hai',
+  });
+
+  const handleLogisticsChangeThree = (event) => {
+    const name = event.target.name;
+    setLogisticsStateThree({
+      ...logisticsStateThree,
+      [name]: event.target.value,
+    });
+  };
+
+  const [logisticsStateFour, setLogisticsStateFour] = useState({
+    logistics: '',
+    name: 'hai',
+  });
+
+  const handleLogisticsChangeFour = (event) => {
+    const name = event.target.name;
+    setLogisticsStateFour({
+      ...logisticsStateFour,
+      [name]: event.target.value,
+    });
+  };
+
+  const [logisticsStateFive, setLogisticsStateFive] = useState({
+    logistics: '',
+    name: 'hai',
+  });
+
+  const handleLogisticsChangeFive = (event) => {
+    const name = event.target.name;
+    setLogisticsStateFive({
+      ...logisticsStateFive,
       [name]: event.target.value,
     });
   };
@@ -145,6 +313,88 @@ const Booking = () => {
     }
   }
 
+  const hideMobileDiv = () => {
+    for (let i = 3; i < hideMobile.current.children.length; i++) {
+      if (hideMobile.current.children[i].style.display === '') {
+        hideMobile.current.children[i].style.display = 'flex';
+        break;
+      }
+      if (i === hideMobile.current.children.length - 3) {
+        hideMobileAddButton.current.style.display = 'none';
+      }
+    }
+  }
+
+  const [uploadOneValue, setUploadOneValue] = useState('');
+
+  const uploadImageMobileOne = () => {
+    uploadMobileOne.current.click();
+
+    uploadMobileOne.current.addEventListener("change", (e) => {
+      const file = e.target.files[0];
+      
+      if (file) {
+        setUploadOneValue(file.name);
+      }
+    });
+  }
+
+  const [uploadTwoValue, setUploadTwoValue] = useState('');
+
+  const uploadImageMobileTwo = () => {
+    uploadMobileTwo.current.click();
+
+    uploadMobileTwo.current.addEventListener("change", (e) => {
+      const file = e.target.files[0];
+      
+      if (file) {
+        setUploadTwoValue(file.name);
+      }
+    });
+  }
+
+  const [uploadThreeValue, setUploadThreeValue] = useState('');
+
+  const uploadImageMobileThree = () => {
+    uploadMobileThree.current.click();
+
+    uploadMobileThree.current.addEventListener("change", (e) => {
+      const file = e.target.files[0];
+      
+      if (file) {
+        setUploadThreeValue(file.name);
+      }
+    });
+  }
+
+  const [uploadFourValue, setUploadFourValue] = useState('');
+
+  const uploadImageMobileFour = () => {
+    uploadMobileFour.current.click();
+
+    uploadMobileFour.current.addEventListener("change", (e) => {
+      const file = e.target.files[0];
+      
+      if (file) {
+        setUploadFourValue(file.name);
+      }
+    });
+  }
+
+  const [uploadFiveValue, setUploadFiveValue] = useState('');
+
+  const uploadImageMobileFive = () => {
+    uploadMobileFive.current.click();
+
+    uploadMobileFive.current.addEventListener("change", (e) => {
+      const file = e.target.files[0];
+      
+      if (file) {
+        setUploadFiveValue(file.name);
+      }
+    });
+  }
+
   return (
     <>
       <section className={bookingStyles.booking}>
@@ -182,77 +432,501 @@ const Booking = () => {
               </svg>
             </div>
           </div>
-          <div className={bookingStyles.card_mobile_body}>
+          <div ref={hideMobile} className={bookingStyles.card_mobile_body}>
             <div className={bookingStyles.card_mobile_div_one}>
-              <div className={bookingStyles.cloth_type}>
-                <FormControl className={classes.formControl}>
-                  <InputLabel htmlFor='age-native-simple'>
-                    Cloth Type
-                  </InputLabel>
-                  <Select
-                    native
-                    value={state.cloth}
-                    onChange={handleClothChange}
-                    inputProps={{
-                      name: 'cloth',
-                      id: 'age-native-simple',
-                    }}
-                  >
-                    <option aria-label='None' value='' />
-                    <option value={10}>Short Gown</option>
-                    <option value={20}>Long Gown</option>
-                    <option value={30}>Pant</option>
-                  </Select>
-                </FormControl>
+              <div className={bookingStyles.first_row}>
+                <div className={bookingStyles.cloth_type}>
+                  <FormControl className={classes.formControl}>
+                    <InputLabel htmlFor='age-native-simple'>
+                      Cloth Type
+                    </InputLabel>
+                    <Select
+                      native
+                      value={clothStateOne.cloth}
+                      onChange={handleClothChangeOne}
+                      inputProps={{
+                        name: 'cloth',
+                        id: 'age-native-simple',
+                      }}
+                    >
+                      <option aria-label='None' value='' />
+                      <option value={10}>Short Gown</option>
+                      <option value={20}>Long Gown</option>
+                      <option value={30}>Pant</option>
+                    </Select>
+                  </FormControl>
+                </div>
+                <div
+                  className={bookingStyles.upload_image}
+                  onClick={() => {
+                    uploadImageMobileOne();
+                  }}
+                >
+                  <input
+                    type='file'
+                    className={bookingStyles.upload_image_input_file}
+                    placeholder='Upload Image'
+                    ref={uploadMobileOne}
+                    hidden
+                  />
+                  <TextField
+                    id='standard-basic'
+                    label='Upload Image'
+                    value={uploadOneValue}
+                    className={bookingStyles.upload_image_input}
+                  />
+                  <span className={bookingStyles.upload}>
+                    <FontAwesomeIcon
+                      icon={faUpload}
+                      className={bookingStyles.upload_icon}
+                    />
+                  </span>
+                </div>
               </div>
-              <div className={bookingStyles.upload_image}>
-                <Button component='label' className={bookingStyles.uploadInput}>
-                  Upload Sample Image
-                  <input type='file' hidden />
-                </Button>
+              <div className={bookingStyles.second_row}>
+                <div className={bookingStyles.quantity}>
+                  <FormControl className={bookingStyles.quantityFormControl}>
+                    <InputLabel htmlFor='quantity-native-simple'>
+                      Quantity
+                    </InputLabel>
+                    <Select
+                      native
+                      value={quantityStateOne.quantity}
+                      onChange={handleQuantityChangeOne}
+                      inputProps={{
+                        name: 'quantity',
+                        id: 'quantity-native-simple',
+                      }}
+                    >
+                      <option aria-label='None' value='' />
+                      <option value={1}>1 {''}</option>
+                      <option value={2}>2 {''}</option>
+                      <option value={3}>3 {''}</option>
+                      <option value={4}>4 {''}</option>
+                      <option value={5}>5 {''}</option>
+                    </Select>
+                  </FormControl>
+                </div>
+                <div className={bookingStyles.logistics}>
+                  <FormControl className={classes.formControl}>
+                    <InputLabel htmlFor='logistics-native-simple'>
+                      Logistics
+                    </InputLabel>
+                    <Select
+                      native
+                      value={logisticsStateOne.logistics}
+                      onChange={handleLogisticsChangeOne}
+                      inputProps={{
+                        name: 'logistics',
+                        id: 'logistics-native-simple',
+                      }}
+                    >
+                      <option aria-label='None' value='' />
+                      <option value={1}>Sort fabric {''}</option>
+                      <option value={2}>I have fabric {''}</option>
+                    </Select>
+                  </FormControl>
+                </div>
               </div>
-              <div className={bookingStyles.quantity}>
-                <FormControl className={classes.formControl}>
-                  <InputLabel htmlFor='quantity-native-simple'>
-                    Quantity
-                  </InputLabel>
-                  <Select
-                    native
-                    value={quantityState.quantity}
-                    onChange={handleQuantityChange}
-                    inputProps={{
-                      name: 'quantity',
-                      id: 'quantity-native-simple',
-                    }}
-                  >
-                    <option aria-label='None' value='' />
-                    <option value={1}>1 {''}</option>
-                    <option value={2}>2 {''}</option>
-                    <option value={3}>3 {''}</option>
-                    <option value={4}>4 {''}</option>
-                    <option value={5}>5 {''}</option>
-                  </Select>
-                </FormControl>
+            </div>
+            <div className={bookingStyles.card_mobile_div_two}>
+              <div className={bookingStyles.first_row}>
+                <div className={bookingStyles.cloth_type}>
+                  <FormControl className={classes.formControl}>
+                    <InputLabel htmlFor='age-native-simple'>
+                      Cloth Type
+                    </InputLabel>
+                    <Select
+                      native
+                      value={clothStateTwo.cloth}
+                      onChange={handleClothChangeTwo}
+                      inputProps={{
+                        name: 'cloth',
+                        id: 'age-native-simple',
+                      }}
+                    >
+                      <option aria-label='None' value='' />
+                      <option value={10}>Short Gown</option>
+                      <option value={20}>Long Gown</option>
+                      <option value={30}>Pant</option>
+                    </Select>
+                  </FormControl>
+                </div>
+                <div
+                  className={bookingStyles.upload_image}
+                  onClick={() => {
+                    uploadImageMobileTwo();
+                  }}
+                >
+                  <input
+                    type='file'
+                    className={bookingStyles.upload_image_input_file}
+                    placeholder='Upload Image'
+                    ref={uploadMobileTwo}
+                    hidden
+                  />
+                  <TextField
+                    id='standard-basic'
+                    label='Upload Image'
+                    value={uploadTwoValue}
+                    className={bookingStyles.upload_image_input}
+                  />
+                  <span className={bookingStyles.upload}>
+                    <FontAwesomeIcon
+                      icon={faUpload}
+                      className={bookingStyles.upload_icon}
+                    />
+                  </span>
+                </div>
               </div>
-              <div className={bookingStyles.logistics}>
-                <FormControl className={classes.formControl}>
-                  <InputLabel htmlFor='logistics-native-simple'>
-                    Logistics
-                  </InputLabel>
-                  <Select
-                    native
-                    value={logisticsState.logistics}
-                    onChange={handleLogisticsChange}
-                    inputProps={{
-                      name: 'logistics',
-                      id: 'logistics-native-simple',
+              <div className={bookingStyles.second_row}>
+                <div className={bookingStyles.quantity}>
+                  <FormControl className={bookingStyles.quantityFormControl}>
+                    <InputLabel htmlFor='quantity-native-simple'>
+                      Quantity
+                    </InputLabel>
+                    <Select
+                      native
+                      value={quantityStateTwo.quantity}
+                      onChange={handleQuantityChangeTwo}
+                      inputProps={{
+                        name: 'quantity',
+                        id: 'quantity-native-simple',
+                      }}
+                    >
+                      <option aria-label='None' value='' />
+                      <option value={1}>1 {''}</option>
+                      <option value={2}>2 {''}</option>
+                      <option value={3}>3 {''}</option>
+                      <option value={4}>4 {''}</option>
+                      <option value={5}>5 {''}</option>
+                    </Select>
+                  </FormControl>
+                </div>
+                <div className={bookingStyles.logistics}>
+                  <FormControl className={classes.formControl}>
+                    <InputLabel htmlFor='logistics-native-simple'>
+                      Logistics
+                    </InputLabel>
+                    <Select
+                      native
+                      value={logisticsStateTwo.logistics}
+                      onChange={handleLogisticsChangeTwo}
+                      inputProps={{
+                        name: 'logistics',
+                        id: 'logistics-native-simple',
+                      }}
+                    >
+                      <option aria-label='None' value='' />
+                      <option value={1}>Sort fabric {''}</option>
+                      <option value={2}>I have fabric {''}</option>
+                    </Select>
+                  </FormControl>
+                </div>
+              </div>
+            </div>
+            <div className={bookingStyles.card_mobile_div_three}>
+              <div className={bookingStyles.first_row}>
+                <div className={bookingStyles.cloth_type}>
+                  <FormControl className={classes.formControl}>
+                    <InputLabel htmlFor='age-native-simple'>
+                      Cloth Type
+                    </InputLabel>
+                    <Select
+                      native
+                      value={clothStateThree.cloth}
+                      onChange={handleClothChangeThree}
+                      inputProps={{
+                        name: 'cloth',
+                        id: 'age-native-simple',
+                      }}
+                    >
+                      <option aria-label='None' value='' />
+                      <option value={10}>Short Gown</option>
+                      <option value={20}>Long Gown</option>
+                      <option value={30}>Pant</option>
+                    </Select>
+                  </FormControl>
+                </div>
+                <div
+                  className={bookingStyles.upload_image}
+                  onClick={() => {
+                    uploadImageMobileThree();
+                  }}
+                >
+                  <input
+                    type='file'
+                    className={bookingStyles.upload_image_input_file}
+                    placeholder='Upload Image'
+                    ref={uploadMobileThree}
+                    hidden
+                  />
+                  <TextField
+                    id='standard-basic'
+                    label='Upload Image'
+                    value={uploadThreeValue}
+                    className={bookingStyles.upload_image_input}
+                  />
+                  <span className={bookingStyles.upload}>
+                    <FontAwesomeIcon
+                      icon={faUpload}
+                      className={bookingStyles.upload_icon}
+                    />
+                  </span>
+                </div>
+              </div>
+              <div className={bookingStyles.second_row}>
+                <div className={bookingStyles.quantity}>
+                  <FormControl className={bookingStyles.quantityFormControl}>
+                    <InputLabel htmlFor='quantity-native-simple'>
+                      Quantity
+                    </InputLabel>
+                    <Select
+                      native
+                      value={quantityStateThree.quantity}
+                      onChange={handleQuantityChangeThree}
+                      inputProps={{
+                        name: 'quantity',
+                        id: 'quantity-native-simple',
+                      }}
+                    >
+                      <option aria-label='None' value='' />
+                      <option value={1}>1 {''}</option>
+                      <option value={2}>2 {''}</option>
+                      <option value={3}>3 {''}</option>
+                      <option value={4}>4 {''}</option>
+                      <option value={5}>5 {''}</option>
+                    </Select>
+                  </FormControl>
+                </div>
+                <div className={bookingStyles.logistics}>
+                  <FormControl className={classes.formControl}>
+                    <InputLabel htmlFor='logistics-native-simple'>
+                      Logistics
+                    </InputLabel>
+                    <Select
+                      native
+                      value={logisticsStateThree.logistics}
+                      onChange={handleLogisticsChangeThree}
+                      inputProps={{
+                        name: 'logistics',
+                        id: 'logistics-native-simple',
+                      }}
+                    >
+                      <option aria-label='None' value='' />
+                      <option value={1}>Sort fabric {''}</option>
+                      <option value={2}>I have fabric {''}</option>
+                    </Select>
+                  </FormControl>
+                </div>
+              </div>
+            </div>
+            <div className={bookingStyles.card_mobile_div_four}>
+              <div className={bookingStyles.first_row}>
+                <div className={bookingStyles.cloth_type}>
+                  <FormControl className={classes.formControl}>
+                    <InputLabel htmlFor='age-native-simple'>
+                      Cloth Type
+                    </InputLabel>
+                    <Select
+                      native
+                      value={clothStateFour.cloth}
+                      onChange={handleClothChangeFour}
+                      inputProps={{
+                        name: 'cloth',
+                        id: 'age-native-simple',
+                      }}
+                    >
+                      <option aria-label='None' value='' />
+                      <option value={10}>Short Gown</option>
+                      <option value={20}>Long Gown</option>
+                      <option value={30}>Pant</option>
+                    </Select>
+                  </FormControl>
+                </div>
+                <div
+                  className={bookingStyles.upload_image}
+                  onClick={() => {
+                    uploadImageMobileFour();
+                  }}
+                >
+                  <input
+                    type='file'
+                    className={bookingStyles.upload_image_input_file}
+                    placeholder='Upload Image'
+                    ref={uploadMobileFour}
+                    hidden
+                  />
+                  <TextField
+                    id='standard-basic'
+                    label='Upload Image'
+                    value={uploadFourValue}
+                    className={bookingStyles.upload_image_input}
+                  />
+                  <span className={bookingStyles.upload}>
+                    <FontAwesomeIcon
+                      icon={faUpload}
+                      className={bookingStyles.upload_icon}
+                    />
+                  </span>
+                </div>
+              </div>
+              <div className={bookingStyles.second_row}>
+                <div className={bookingStyles.quantity}>
+                  <FormControl className={bookingStyles.quantityFormControl}>
+                    <InputLabel htmlFor='quantity-native-simple'>
+                      Quantity
+                    </InputLabel>
+                    <Select
+                      native
+                      value={quantityStateFour.quantity}
+                      onChange={handleQuantityChangeFour}
+                      inputProps={{
+                        name: 'quantity',
+                        id: 'quantity-native-simple',
+                      }}
+                    >
+                      <option aria-label='None' value='' />
+                      <option value={1}>1 {''}</option>
+                      <option value={2}>2 {''}</option>
+                      <option value={3}>3 {''}</option>
+                      <option value={4}>4 {''}</option>
+                      <option value={5}>5 {''}</option>
+                    </Select>
+                  </FormControl>
+                </div>
+                <div className={bookingStyles.logistics}>
+                  <FormControl className={classes.formControl}>
+                    <InputLabel htmlFor='logistics-native-simple'>
+                      Logistics
+                    </InputLabel>
+                    <Select
+                      native
+                      value={logisticsStateFour.logistics}
+                      onChange={handleLogisticsChangeFour}
+                      inputProps={{
+                        name: 'logistics',
+                        id: 'logistics-native-simple',
+                      }}
+                    >
+                      <option aria-label='None' value='' />
+                      <option value={1}>Sort fabric {''}</option>
+                      <option value={2}>I have fabric {''}</option>
+                    </Select>
+                  </FormControl>
+                </div>
+              </div>
+            </div>
+            <div className={bookingStyles.card_mobile_div_four}>
+              <div className={bookingStyles.first_row}>
+                <div className={bookingStyles.cloth_type}>
+                  <FormControl className={classes.formControl}>
+                    <InputLabel htmlFor='age-native-simple'>
+                      Cloth Type
+                    </InputLabel>
+                    <Select
+                      native
+                      value={clothStateFive.cloth}
+                      onChange={handleClothChangeFive}
+                      inputProps={{
+                        name: 'cloth',
+                        id: 'age-native-simple',
+                      }}
+                    >
+                      <option aria-label='None' value='' />
+                      <option value={10}>Short Gown</option>
+                      <option value={20}>Long Gown</option>
+                      <option value={30}>Pant</option>
+                    </Select>
+                  </FormControl>
+                </div>
+                <div
+                  className={bookingStyles.upload_image}
+                  onClick={() => {
+                    uploadImageMobileFive();
+                  }}
+                >
+                  <input
+                    type='file'
+                    className={bookingStyles.upload_image_input_file}
+                    placeholder='Upload Image'
+                    ref={uploadMobileFive}
+                    hidden
+                  />
+                  <TextField
+                    id='standard-basic'
+                    label='Upload Image'
+                    value={uploadFiveValue}
+                    className={bookingStyles.upload_image_input}
+                  />
+                  <span className={bookingStyles.upload}>
+                    <FontAwesomeIcon
+                      icon={faUpload}
+                      className={bookingStyles.upload_icon}
+                    />
+                  </span>
+                </div>
+              </div>
+              <div className={bookingStyles.second_row}>
+                <div className={bookingStyles.quantity}>
+                  <FormControl className={bookingStyles.quantityFormControl}>
+                    <InputLabel htmlFor='quantity-native-simple'>
+                      Quantity
+                    </InputLabel>
+                    <Select
+                      native
+                      value={quantityStateFive.quantity}
+                      onChange={handleQuantityChangeFive}
+                      inputProps={{
+                        name: 'quantity',
+                        id: 'quantity-native-simple',
+                      }}
+                    >
+                      <option aria-label='None' value='' />
+                      <option value={1}>1 {''}</option>
+                      <option value={2}>2 {''}</option>
+                      <option value={3}>3 {''}</option>
+                      <option value={4}>4 {''}</option>
+                      <option value={5}>5 {''}</option>
+                    </Select>
+                  </FormControl>
+                </div>
+                <div className={bookingStyles.logistics}>
+                  <FormControl className={classes.formControl}>
+                    <InputLabel htmlFor='logistics-native-simple'>
+                      Logistics
+                    </InputLabel>
+                    <Select
+                      native
+                      value={logisticsStateFive.logistics}
+                      onChange={handleLogisticsChangeFive}
+                      inputProps={{
+                        name: 'logistics',
+                        id: 'logistics-native-simple',
+                      }}
+                    >
+                      <option aria-label='None' value='' />
+                      <option value={1}>Sort fabric {''}</option>
+                      <option value={2}>I have fabric {''}</option>
+                    </Select>
+                  </FormControl>
+                </div>
+              </div>
+            </div>
+            <div
+              ref={hideMobileAddButton}
+              className={bookingStyles.add_button_div}
+            >
+              <div className={bookingStyles.add_button}>
+                <IconButton>
+                  <AddCircleOutline
+                    style={{ fontSize: 40 }}
+                    className={bookingStyles.add_button_icon}
+                    onClick={() => {
+                      hideMobileDiv();
                     }}
-                  >
-                    <option aria-label='None' value='' />
-                    <option value={1}>Sort fabric {''}</option>
-                    <option value={2}>I have fabric {''}</option>
-                  </Select>
-                </FormControl>
+                  />
+                </IconButton>
               </div>
             </div>
           </div>
@@ -797,13 +1471,6 @@ const Booking = () => {
                       }}
                     />
                   </IconButton>
-                  {/* <FontAwesomeIcon
-                    icon={faPlus}
-                    className={bookingStyles.add_button_icon}
-                    onClick={() => {
-                      hideDiv();
-                    }}
-                  /> */}
                 </div>
               </div>
             </div>
