@@ -1163,15 +1163,8 @@
             justify-content: space-between;
             align-items: center;
             position: relative;
-
-            &::after {
-                content: "";
-                position: absolute;
-                top: 8rem;
-                width: 100%;
-                height: 1px;
-                background-color: #eee;
-            }
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
 
             .card_mobile_icon {
                 display: flex;
@@ -1254,12 +1247,12 @@
             .card_mobile_div_one {
                 display: flex;
                 flex-direction: column;
-                justify-content: center;                
-                flex-wrap: wrap;
-                flex-flow: column wrap;
-                align-content: center;
+                justify-content: flex-start;
+                align-content: flex-start;
                 position: relative;
                 padding-top: 2rem;
+                padding-left: 2rem;
+                padding-right: 2rem;
                 padding-bottom: 2rem;
                 border-bottom: 1px solid #eee;
 
@@ -1344,12 +1337,12 @@
             .card_mobile_div_two {
                 display: flex;
                 flex-direction: column;
-                justify-content: center;                
-                flex-wrap: wrap;
-                flex-flow: column wrap;
-                align-content: center;
+                justify-content: flex-start;
+                align-content: flex-start;
                 position: relative;
                 padding-top: 2rem;
+                padding-left: 2rem;
+                padding-right: 2rem;
                 padding-bottom: 2rem;
                 border-bottom: 1px solid #eee;
 
@@ -1433,12 +1426,12 @@
             .card_mobile_div_three {
                 display: flex;
                 flex-direction: column;
-                justify-content: center;                
-                flex-wrap: wrap;
-                flex-flow: column wrap;
-                align-content: center;
+                justify-content: flex-start;
+                align-content: flex-start;
                 position: relative;
                 padding-top: 2rem;
+                padding-left: 2rem;
+                padding-right: 2rem;
                 padding-bottom: 2rem;
                 border-bottom: 1px solid #eee;
 
@@ -1522,12 +1515,12 @@
             .card_mobile_div_four {
                 display: none;
                 flex-direction: column;
-                justify-content: center;                
-                flex-wrap: wrap;
-                flex-flow: column wrap;
-                align-content: center;
+                justify-content: flex-start;
+                align-content: flex-start;
                 position: relative;
                 padding-top: 2rem;
+                padding-left: 2rem;
+                padding-right: 2rem;
                 padding-bottom: 2rem;
                 border-bottom: 1px solid #eee;
 
@@ -1631,6 +1624,456 @@
 
     .card {
         display: none;
+    }
+}
+}
+
+@media only screen and (max-width: 560px) {
+.booking {
+
+    .card_mobile {
+        background: #fff;
+        width: 100%;
+        height: auto;
+        margin: 1rem auto;
+        border-radius: 10px;
+
+        .card_mobile_body {
+            display: grid;
+            grid-template-columns: 1fr;
+
+            .card_mobile_div_one {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-content: flex-start;
+                position: relative;
+                padding-top: 2rem;
+                padding-left: 2rem;
+                padding-right: 2rem;
+                padding-bottom: 2rem;
+                border-bottom: 1px solid #eee;
+
+                .first_row {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                
+                    .cloth_type {
+                        padding-right: 0rem;
+                        padding-bottom: 1rem;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .upload_image {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        padding-bottom: 1rem;
+                        position: relative;
+
+                        .upload_image_input_file {
+                            border: 0;
+                            outline: none;
+                            width: 70%;
+                            -webkit-box-sizing: border-box;
+                            -moz-box-sizing: border-box;
+                            box-sizing: border-box;
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            font-size: 16px;
+                            cursor: pointer;
+                            display: none;
+                        }
+
+                        .upload_image_input {
+                            border: 0;
+                            outline: none;
+                            width: 70%;
+                            -webkit-box-sizing: border-box;
+                            -moz-box-sizing: border-box;
+                            box-sizing: border-box;
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            font-size: 16px;
+                            pointer-events: none;
+                        }
+
+                        .upload {
+                            display: block;
+                            position: absolute;
+                            top: 18px;
+                            left: 70%;
+                            cursor: pointer;
+
+                            .upload_icon {
+                                font-size: 1.2rem;
+                                color: #757575;
+                            }
+                        }
+                    }
+                }
+
+                .second_row {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    .quantity {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        margin-left: 0rem;
+                        padding-bottom: 1rem;
+
+                        .quantityFormControl {
+                            width: 7rem;
+                        }
+                    }
+
+                    .logistics {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        margin-right: 0rem;
+                        padding-bottom: 1rem;
+                    }
+                }
+            }
+
+            .card_mobile_div_two {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-content: flex-start;
+                position: relative;
+                padding-top: 2rem;
+                padding-left: 2rem;
+                padding-right: 2rem;
+                padding-bottom: 2rem;
+                border-bottom: 1px solid #eee;
+
+                .first_row {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                
+                    .cloth_type {
+                        padding-right: 0rem;
+                        padding-bottom: 1rem;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .upload_image {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        padding-bottom: 1rem;
+                        position: relative;
+
+                        .upload_image_input_file {
+                            border: 0;
+                            outline: none;
+                            width: 70%;
+                            -webkit-box-sizing: border-box;
+                            -moz-box-sizing: border-box;
+                            box-sizing: border-box;
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            font-size: 16px;
+                            cursor: pointer;
+                            display: none;
+                        }
+
+                        .upload_image_input {
+                            border: 0;
+                            outline: none;
+                            width: 70%;
+                            -webkit-box-sizing: border-box;
+                            -moz-box-sizing: border-box;
+                            box-sizing: border-box;
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            font-size: 16px;
+                            pointer-events: none;
+                        }
+
+                        .upload {
+                            display: block;
+                            position: absolute;
+                            top: 18px;
+                            left: 70%;
+                            cursor: pointer;
+
+                            .upload_icon {
+                                font-size: 1.2rem;
+                                color: #757575;
+                            }
+                        }
+                    }
+                }
+
+                .second_row {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    .quantity {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        margin-left: 0rem;
+                        padding-bottom: 1rem;
+
+                        .quantityFormControl {
+                            width: 7rem;
+                        }
+                    }
+
+                    .logistics {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        margin-right: 0rem;
+                        padding-bottom: 1rem;
+                    }
+                }
+            }
+
+            .card_mobile_div_three {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-content: flex-start;
+                position: relative;
+                padding-top: 2rem;
+                padding-left: 2rem;
+                padding-right: 2rem;
+                padding-bottom: 2rem;
+                border-bottom: 1px solid #eee;
+
+                .first_row {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                
+                    .cloth_type {
+                        padding-right: 0rem;
+                        padding-bottom: 1rem;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .upload_image {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        padding-bottom: 1rem;
+                        position: relative;
+
+                        .upload_image_input_file {
+                            border: 0;
+                            outline: none;
+                            width: 70%;
+                            -webkit-box-sizing: border-box;
+                            -moz-box-sizing: border-box;
+                            box-sizing: border-box;
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            font-size: 16px;
+                            cursor: pointer;
+                            display: none;
+                        }
+
+                        .upload_image_input {
+                            border: 0;
+                            outline: none;
+                            width: 70%;
+                            -webkit-box-sizing: border-box;
+                            -moz-box-sizing: border-box;
+                            box-sizing: border-box;
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            font-size: 16px;
+                            pointer-events: none;
+                        }
+
+                        .upload {
+                            display: block;
+                            position: absolute;
+                            top: 18px;
+                            left: 70%;
+                            cursor: pointer;
+
+                            .upload_icon {
+                                font-size: 1.2rem;
+                                color: #757575;
+                            }
+                        }
+                    }
+                }
+
+                .second_row {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    .quantity {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        margin-left: 0rem;
+                        padding-bottom: 1rem;
+
+                        .quantityFormControl {
+                            width: 7rem;
+                        }
+                    }
+
+                    .logistics {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        margin-right: 0rem;
+                        padding-bottom: 1rem;
+                    }
+                }
+            }
+
+            .card_mobile_div_four {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-content: flex-start;
+                position: relative;
+                padding-top: 2rem;
+                padding-left: 2rem;
+                padding-right: 2rem;
+                padding-bottom: 2rem;
+                border-bottom: 1px solid #eee;
+
+                .first_row {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                
+                    .cloth_type {
+                        padding-right: 0rem;
+                        padding-bottom: 1rem;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .upload_image {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        padding-bottom: 1rem;
+                        position: relative;
+
+                        .upload_image_input_file {
+                            border: 0;
+                            outline: none;
+                            width: 70%;
+                            -webkit-box-sizing: border-box;
+                            -moz-box-sizing: border-box;
+                            box-sizing: border-box;
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            font-size: 16px;
+                            cursor: pointer;
+                            display: none;
+                        }
+
+                        .upload_image_input {
+                            border: 0;
+                            outline: none;
+                            width: 70%;
+                            -webkit-box-sizing: border-box;
+                            -moz-box-sizing: border-box;
+                            box-sizing: border-box;
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            font-size: 16px;
+                            pointer-events: none;
+                        }
+
+                        .upload {
+                            display: block;
+                            position: absolute;
+                            top: 18px;
+                            left: 70%;
+                            cursor: pointer;
+
+                            .upload_icon {
+                                font-size: 1.2rem;
+                                color: #757575;
+                            }
+                        }
+                    }
+                }
+
+                .second_row {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    .quantity {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        margin-left: 0rem;
+                        padding-bottom: 1rem;
+
+                        .quantityFormControl {
+                            width: 7rem;
+                        }
+                    }
+
+                    .logistics {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        margin-right: 0rem;
+                        padding-bottom: 1rem;
+                    }
+                }
+            }
+        }
     }
 }
 }

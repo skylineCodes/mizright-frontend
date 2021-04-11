@@ -435,8 +435,8 @@ const Booking = () => {
           <div ref={hideMobile} className={bookingStyles.card_mobile_body}>
             <div className={bookingStyles.card_mobile_div_one}>
               <div className={bookingStyles.first_row}>
-                <div className={bookingStyles.cloth_type}>
-                  <FormControl className={classes.formControl}>
+              <div className={bookingStyles.cloth_type}>
+                <FormControl className={classes.formControl}>
                     <InputLabel htmlFor='age-native-simple'>
                       Cloth Type
                     </InputLabel>
@@ -455,14 +455,14 @@ const Booking = () => {
                       <option value={30}>Pant</option>
                     </Select>
                   </FormControl>
-                </div>
-                <div
-                  className={bookingStyles.upload_image}
-                  onClick={() => {
-                    uploadImageMobileOne();
-                  }}
-                >
-                  <input
+              </div>
+              <div
+                className={bookingStyles.upload_image}
+                onClick={() => {
+                  uploadImageMobileOne();
+                }}
+              >
+                <input
                     type='file'
                     className={bookingStyles.upload_image_input_file}
                     placeholder='Upload Image'
@@ -481,11 +481,11 @@ const Booking = () => {
                       className={bookingStyles.upload_icon}
                     />
                   </span>
-                </div>
+              </div>
               </div>
               <div className={bookingStyles.second_row}>
-                <div className={bookingStyles.quantity}>
-                  <FormControl className={bookingStyles.quantityFormControl}>
+              <div className={bookingStyles.quantity}>
+                <FormControl className={bookingStyles.quantityFormControl}>
                     <InputLabel htmlFor='quantity-native-simple'>
                       Quantity
                     </InputLabel>
@@ -506,9 +506,9 @@ const Booking = () => {
                       <option value={5}>5 {''}</option>
                     </Select>
                   </FormControl>
-                </div>
-                <div className={bookingStyles.logistics}>
-                  <FormControl className={classes.formControl}>
+              </div>
+              <div className={bookingStyles.logistics}>
+                <FormControl className={classes.formControl}>
                     <InputLabel htmlFor='logistics-native-simple'>
                       Logistics
                     </InputLabel>
@@ -526,7 +526,7 @@ const Booking = () => {
                       <option value={2}>I have fabric {''}</option>
                     </Select>
                   </FormControl>
-                </div>
+              </div>
               </div>
             </div>
             <div className={bookingStyles.card_mobile_div_two}>
