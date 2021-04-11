@@ -8,6 +8,10 @@
     justify-content: center;
     align-items: center;
 
+    .card_mobile {
+        display: none;
+    }
+
     .card {
         background: #fff;
         width: auto;

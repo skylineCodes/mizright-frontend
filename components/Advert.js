@@ -62,10 +62,7 @@ const Advert = () => {
               </li>
             </ul>
             <Link href='/booking' scroll={true}>
-              <a
-                href=''
-                className={advertStyles.item_btn}
-              >
+              <a href='' className={advertStyles.item_btn}>
                 Sew With Us
               </a>
             </Link>
@@ -73,7 +70,7 @@ const Advert = () => {
         </div>
         <div className={advertStyles.image_div}>
           <img
-            src='../images/princess.jpg'
+            src='../images/ankara_gown.jpg'
             alt='blue gown'
             className={advertStyles.image}
           />
