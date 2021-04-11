@@ -18,7 +18,6 @@
         display: flex;
         flex-direction: row;
         padding: 1rem 1rem;
-        width: 10%;
 
         a {
             text-decoration: none;
@@ -288,6 +287,10 @@
             font-size: 25px;
         }
 
+        .logo {
+            font-size: 2rem;
+        }
+
         .nav_buttons_mobile {
             display: flex;
             position: absolute;
@@ -377,6 +380,14 @@
     }
 }
 
+@media only screen and (max-width: 360px) {
+.header {
+    .nav_buttons_mobile {
+        display: none;
+    }
+}
+}
+
 @media only screen and (max-width: 342px) {
 .header {
         display: flex;
@@ -390,6 +401,10 @@
             line-height: 70px;
             cursor: pointer;
             font-size: 25px;
+        }
+
+        .logo {
+            font-size: 2rem;
         }
 
         .nav_buttons_mobile {

@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
+import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconButton } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
 import { TextField, InputLabel } from '@material-ui/core';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
@@ -386,9 +386,13 @@ const Booking = () => {
           <div className={bookingStyles.card_mobile_header}>
             <div className={bookingStyles.card_mobile_icon}>
               <div className={bookingStyles.card_mobile_arrow_back}>
-                <IconButton>
-                  <KeyboardBackspace style={{ fontSize: 40, color: '#000' }} />
-                </IconButton>
+                <Link href='/' scroll={false}>
+                  <IconButton>
+                    <KeyboardBackspace
+                      style={{ fontSize: 40, color: '#000' }}
+                    />
+                  </IconButton>
+                </Link>
               </div>
               <div className={bookingStyles.card_mobile_header_div}>
                 <h5 className={bookingStyles.card_mobile_header_text}>
