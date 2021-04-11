@@ -918,7 +918,28 @@ const Booking = () => {
               </div>
             </div>
           </div>
-          <div className={bookingStyles.card_mobile_footer}></div>
+          <div className={bookingStyles.card_mobile_footer}>
+            <div className={bookingStyles.next_button_div}>
+              <a href='#' className={bookingStyles.next_button}>
+                Next{' '}
+                <span>
+                  <svg
+                    width='60'
+                    height='38'
+                    className={bookingStyles.next_button_svg}
+                    viewBox='0 0 146 38'
+                    fill='none'
+                    xmlns='http://www.w3.org/2000/svg'
+                  >
+                    <path
+                      d='M144.768 20.7678C145.744 19.7914 145.744 18.2085 144.768 17.2322L128.858 1.32232C127.882 0.346009 126.299 0.346009 125.322 1.32232C124.346 2.29863 124.346 3.88154 125.322 4.85785L139.464 19L125.322 33.1421C124.346 34.1184 124.346 35.7013 125.322 36.6777C126.299 37.654 127.882 37.654 128.858 36.6777L144.768 20.7678ZM2.18557e-07 21.5L143 21.5L143 16.5L-2.18557e-07 16.5L2.18557e-07 21.5Z'
+                      fill='white'
+                    />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
         </div>
         <div className={bookingStyles.card}>
           <div className={bookingStyles.header}>
