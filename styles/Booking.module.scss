@@ -1668,6 +1668,10 @@
                         flex-direction: column;
                         justify-content: center;
                         align-items: center;
+
+                        .formControl {
+                            width: 13rem;
+                        }
                     }
 
                     .upload_image {
@@ -1681,7 +1685,7 @@
                         .upload_image_input_file {
                             border: 0;
                             outline: none;
-                            width: 70%;
+                            width: 100%;
                             -webkit-box-sizing: border-box;
                             -moz-box-sizing: border-box;
                             box-sizing: border-box;
@@ -1695,7 +1699,7 @@
                         .upload_image_input {
                             border: 0;
                             outline: none;
-                            width: 70%;
+                            width: 100%;
                             -webkit-box-sizing: border-box;
                             -moz-box-sizing: border-box;
                             box-sizing: border-box;
@@ -1709,7 +1713,7 @@
                             display: block;
                             position: absolute;
                             top: 18px;
-                            left: 70%;
+                            left: 90%;
                             cursor: pointer;
 
                             .upload_icon {
@@ -1735,7 +1739,7 @@
                         padding-bottom: 1rem;
 
                         .quantityFormControl {
-                            width: 7rem;
+                            width: 13rem;
                         }
                     }
 
@@ -1746,6 +1750,10 @@
                         align-items: center;
                         margin-right: 0rem;
                         padding-bottom: 1rem;
+
+                        .formControl {
+                            width: 13rem;
+                        }
                     }
                 }
             }
@@ -1776,6 +1784,10 @@
                         flex-direction: column;
                         justify-content: center;
                         align-items: center;
+
+                        .formControl {
+                            width: 13rem;
+                        }
                     }
 
                     .upload_image {
@@ -1789,7 +1801,7 @@
                         .upload_image_input_file {
                             border: 0;
                             outline: none;
-                            width: 70%;
+                            width: 100%;
                             -webkit-box-sizing: border-box;
                             -moz-box-sizing: border-box;
                             box-sizing: border-box;
@@ -1803,7 +1815,7 @@
                         .upload_image_input {
                             border: 0;
                             outline: none;
-                            width: 70%;
+                            width: 100%;
                             -webkit-box-sizing: border-box;
                             -moz-box-sizing: border-box;
                             box-sizing: border-box;
@@ -1817,7 +1829,7 @@
                             display: block;
                             position: absolute;
                             top: 18px;
-                            left: 70%;
+                            left: 90%;
                             cursor: pointer;
 
                             .upload_icon {
@@ -1843,7 +1855,7 @@
                         padding-bottom: 1rem;
 
                         .quantityFormControl {
-                            width: 7rem;
+                            width: 13rem;
                         }
                     }
 
@@ -1854,6 +1866,10 @@
                         align-items: center;
                         margin-right: 0rem;
                         padding-bottom: 1rem;
+
+                        .formControl {
+                            width: 13rem;
+                        }
                     }
                 }
             }
@@ -1884,6 +1900,10 @@
                         flex-direction: column;
                         justify-content: center;
                         align-items: center;
+
+                        .formControl {
+                            width: 13rem;
+                        }
                     }
 
                     .upload_image {
@@ -1897,7 +1917,7 @@
                         .upload_image_input_file {
                             border: 0;
                             outline: none;
-                            width: 70%;
+                            width: 100%;
                             -webkit-box-sizing: border-box;
                             -moz-box-sizing: border-box;
                             box-sizing: border-box;
@@ -1911,7 +1931,7 @@
                         .upload_image_input {
                             border: 0;
                             outline: none;
-                            width: 70%;
+                            width: 100%;
                             -webkit-box-sizing: border-box;
                             -moz-box-sizing: border-box;
                             box-sizing: border-box;
@@ -1925,7 +1945,7 @@
                             display: block;
                             position: absolute;
                             top: 18px;
-                            left: 70%;
+                            left: 90%;
                             cursor: pointer;
 
                             .upload_icon {
@@ -1951,7 +1971,7 @@
                         padding-bottom: 1rem;
 
                         .quantityFormControl {
-                            width: 7rem;
+                            width: 13rem;
                         }
                     }
 
@@ -1962,12 +1982,16 @@
                         align-items: center;
                         margin-right: 0rem;
                         padding-bottom: 1rem;
+
+                        .formControl {
+                            width: 13rem;
+                        }
                     }
                 }
             }
 
             .card_mobile_div_four {
-                display: flex;
+                display: none;
                 flex-direction: column;
                 justify-content: flex-start;
                 align-content: flex-start;
@@ -1992,6 +2016,10 @@
                         flex-direction: column;
                         justify-content: center;
                         align-items: center;
+
+                        .formControl {
+                            width: 13rem;
+                        }
                     }
 
                     .upload_image {
@@ -2005,7 +2033,7 @@
                         .upload_image_input_file {
                             border: 0;
                             outline: none;
-                            width: 70%;
+                            width: 100%;
                             -webkit-box-sizing: border-box;
                             -moz-box-sizing: border-box;
                             box-sizing: border-box;
@@ -2019,7 +2047,7 @@
                         .upload_image_input {
                             border: 0;
                             outline: none;
-                            width: 70%;
+                            width: 100%;
                             -webkit-box-sizing: border-box;
                             -moz-box-sizing: border-box;
                             box-sizing: border-box;
@@ -2033,7 +2061,7 @@
                             display: block;
                             position: absolute;
                             top: 18px;
-                            left: 70%;
+                            left: 90%;
                             cursor: pointer;
 
                             .upload_icon {
@@ -2059,7 +2087,7 @@
                         padding-bottom: 1rem;
 
                         .quantityFormControl {
-                            width: 7rem;
+                            width: 13rem;
                         }
                     }
 
@@ -2070,6 +2098,10 @@
                         align-items: center;
                         margin-right: 0rem;
                         padding-bottom: 1rem;
+
+                        .formControl {
+                            width: 13rem;
+                        }
                     }
                 }
             }
