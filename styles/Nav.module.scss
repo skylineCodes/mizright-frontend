@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: lightblue;
+  box-shadow: 0 4px 5px rgba(199,201,200,.8);
 }
 
 .header {
@@ -11,8 +11,8 @@
     max-width: 120rem;
     position: sticky;
     background-color: #fff;
-    z-index: 1;
-    transition: all .7s ease-in;
+    z-index: 10;
+    transition: all .4s ease-in-out;
 
     .nav_buttons_mobile {
         display: none;
@@ -24,9 +24,8 @@
     
     .logo {
         display: flex;
-        flex-direction: row;
-        padding: 1rem 1rem;
         cursor: pointer;
+        margin-bottom: 0px;
 
         .image {
             height: 80px;
@@ -43,7 +42,7 @@
         .nav_list {
             display: flex;
             flex-direction: row;
-            margin: auto 2rem;
+            margin: auto 0rem;
             list-style: none;
             font-size: 18px;
             font-family: Lato;
@@ -53,6 +52,7 @@
             line-height: 158.7%;
             font-style: normal;
             font-weight: normal;
+            padding-left: 1rem;
         }
 
         .nav_item {
