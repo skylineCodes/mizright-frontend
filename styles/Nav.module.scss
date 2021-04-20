@@ -26,6 +26,7 @@
         display: flex;
         cursor: pointer;
         margin-bottom: 0px;
+        padding-left: 4rem;
 
         .image {
             height: 80px;
@@ -139,7 +140,7 @@
                 &:hover {
                     color: #fff;
                     background: #CD0327;
-                    border: 3px solid #CD0327;;
+                    border: 3px solid #CD0327;
                 }
             }
         }

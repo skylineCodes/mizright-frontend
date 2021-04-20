@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import Link from 'next/link';
-import Aos from 'aos';
+import { motion } from 'framer-motion';
 import 'aos/dist/aos.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -11,10 +11,6 @@ import {
 import advertStyles from '../styles/Advert.module.scss';
 
 const Advert = () => {
-  useEffect(() => {
-    Aos.init({ offset: 100, mirror: true, duration: 1000 });
-  }, []);
-
   return (
     <>
       <section className={advertStyles.advert}>
@@ -62,9 +58,14 @@ const Advert = () => {
               </li>
             </ul>
             <Link href='/booking' scroll={true}>
-              <a href='' className={advertStyles.item_btn}>
+              <motion.a
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95, border: 'none' }}
+                href=''
+                className={advertStyles.item_btn}
+              >
                 Sew With Us
-              </a>
+              </motion.a>
             </Link>
           </div>
         </div>

@@ -1,7 +1,18 @@
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import heroStyles from '../styles/Hero.module.scss';
 
 const Hero = () => {
+  const fadeRight = {
+    hidden: { opacity: 0, x: 150 },
+    visible: { opacity: 1, x: 0 }
+  }
+
+  const fadeLeft = {
+    hidden: { opacity: 0, x: -100 },
+    visible: { opacity: 1, x: 0 }
+  }
+
   return (
     <>
       <section className={heroStyles.hero}>
@@ -23,11 +34,21 @@ const Hero = () => {
         <div className={heroStyles.container}>
           <main className={heroStyles.main}>
             <div className={heroStyles.text}>
-              <h1 className={heroStyles.item_title}>
+              <motion.h1
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1 }}
+                className={heroStyles.item_title}
+              >
                 Sew Well Tailored Outfits in{' '}
                 <span className={heroStyles.span}>3 simple steps</span>
-              </h1>
-              <div className={heroStyles.scissors_div}>
+              </motion.h1>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1.5 }}
+                className={heroStyles.scissors_div}
+              >
                 <img
                   src='../images/scissors.png'
                   alt='scissors'
@@ -52,26 +73,35 @@ const Hero = () => {
                     stroke-dasharray='10 20'
                   />
                 </svg>
-              </div>
-              <p className={heroStyles.item_description}>
+              </motion.div>
+              <motion.p
+                variants={fadeLeft}
+                initial='hidden'
+                animate='visible'
+                transition={{ duration: 1 }}
+                className={heroStyles.item_description}
+              >
                 We sew coutures and ready made fabrics tailored to your taste.
-              </p>
+              </motion.p>
               <Link href='/booking' scroll={false}>
-                <a
-                  href=''
-                  className={heroStyles.item_btn}
-                >
+                <motion.a whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95, border: 'none' }} href='' className={heroStyles.item_btn}>
                   Sew With Us
-                </a>
+                </motion.a>
               </Link>
             </div>
-            <div className={heroStyles.image_div}>
+            <motion.div
+              className={heroStyles.image_div}
+              variants={fadeRight}
+              initial='hidden'
+              animate='visible'
+              transition={{ duration: 1 }}
+            >
               <img
                 src='../images/blouse2.png'
                 alt='fashion'
                 className={heroStyles.image}
               />
-            </div>
+            </motion.div>
           </main>
         </div>
       </section>

@@ -1,13 +1,18 @@
 import { useEffect } from 'react';
-import Aos from 'aos';
+import { motion } from 'framer-motion';
 import 'aos/dist/aos.css';
 import serviceStyles from '../styles/Service.module.scss';
 
 const Service = () => {
+  const fadeRight = {
+    hidden: { opacity: 0, x: 150 },
+    visible: { opacity: 1, x: 0 },
+  };
 
-  useEffect(() => {
-    Aos.init({ offset: 10, mirror: true, duration: 1000 });
-  }, []);
+  const fadeLeft = {
+    hidden: { opacity: 0, x: -100 },
+    visible: { opacity: 1, x: 0 },
+  };
 
   return (
     <>
@@ -28,20 +33,36 @@ const Service = () => {
           />
         </svg>
 
-        <div className={serviceStyles.svg}>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className={serviceStyles.svg}
+        >
           <img
             src='../images/dress.png'
             alt='dress'
             className={serviceStyles.image}
           />
-        </div>
-        <div className={serviceStyles.section_header}>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className={serviceStyles.section_header}
+        >
           <h1 className={serviceStyles.mainText}>Our Services</h1>
           <p className={serviceStyles.subText}>
             We give you realistic deadlines and deliver within time frame
           </p>
-        </div>
-        <div className={serviceStyles.serviceone}>
+        </motion.div>
+        <motion.div
+          variants={fadeLeft}
+          initial='hidden'
+          animate='visible'
+          transition={{ duration: 1 }}
+          className={serviceStyles.serviceone}
+        >
           <div className={serviceStyles.card}>
             <h3 className={serviceStyles.card_header}>Coutures</h3>
             <ul className={serviceStyles.card_list}>
@@ -108,9 +129,15 @@ const Service = () => {
             </ul>
           </div>
           <div className={serviceStyles.image}></div>
-        </div>
+        </motion.div>
 
-        <div className={serviceStyles.servicetwo}>
+        <motion.div
+          variants={fadeRight}
+          initial='hidden'
+          animate='visible'
+          transition={{ duration: 1 }}
+          className={serviceStyles.servicetwo}
+        >
           <div className={serviceStyles.card}>
             <h3 className={serviceStyles.card_header}>Ready to wear</h3>
             <ul className={serviceStyles.card_list}>
@@ -177,7 +204,7 @@ const Service = () => {
             </ul>
           </div>
           <div className={serviceStyles.image}></div>
-        </div>
+        </motion.div>
       </section>
     </>
   );
