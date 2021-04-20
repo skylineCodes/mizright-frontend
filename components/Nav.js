@@ -33,7 +33,13 @@ const Nav = () => {
     return (
       <header className={navStyles.header}>
         <h1 className={navStyles.logo}>
-          <Link href='/'>Logo</Link>
+          <Link href='/'>
+            <img
+              src='../images/logos.jpg'
+              alt='logo'
+              className={navStyles.image}
+            />
+          </Link>
         </h1>
         <label className={navStyles.icon}>
           <span
