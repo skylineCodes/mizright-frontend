@@ -213,6 +213,11 @@
                         font-style: normal;
                         font-family: Lato;
                         cursor: pointer;
+
+                        .image {
+                            height: 80px;
+                            object-fit: contain;
+                        }
                     }
 
                     .copywrite {
@@ -393,6 +398,11 @@
                     font-style: normal;
                     font-family: Lato;
                     cursor: pointer;
+
+                    .image {
+                        height: 80px;
+                        object-fit: contain;
+                    }
                 }
 
                 .copywrite {
