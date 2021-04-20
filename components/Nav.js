@@ -1,4 +1,4 @@
-import {useRef} from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
@@ -8,6 +8,20 @@ const Nav = () => {
     const nav = useRef('');
     const barIcon = useRef('');
     const timesIcon = useRef('');
+    const [scrolled, setScrolled] = useState(false);
+
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      if (offset > 200) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    useEffect(() => {
+      window.addEventListener('scroll', handleScroll);
+    });
 
     const toggleNavBar = (value) => {
       if (window.matchMedia('(max-width: 989px)').matches && value === 'open') {
@@ -31,7 +45,7 @@ const Nav = () => {
     };
 
     return (
-      <header className={navStyles.header}>
+      <header className={`${navStyles.header} && ${scrolled ? navStyles.scrolled : ''}`}>
         <h1 className={navStyles.logo}>
           <Link href='/'>
             <img
