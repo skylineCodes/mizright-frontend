@@ -5,7 +5,7 @@ import { IconButton } from '@material-ui/core';
 import { TextField, InputLabel } from '@material-ui/core';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-import { AddCircleOutline, KeyboardBackspace } from '@material-ui/icons';
+import { KeyboardBackspace, Add } from '@material-ui/icons';
 import { faAngleDown, faUpload } from '@fortawesome/free-solid-svg-icons';
 import bookingStyles from '../styles/Booking.module.scss';
 
@@ -907,8 +907,8 @@ const Booking = () => {
             >
               <div className={bookingStyles.add_button}>
                 <IconButton>
-                  <AddCircleOutline
-                    style={{ fontSize: 40 }}
+                  <Add
+                    style={{ fontSize: 40, borderRadius: '50%' }}
                     className={bookingStyles.add_button_icon}
                     onClick={() => {
                       hideMobileDiv();
@@ -1472,7 +1472,7 @@ const Booking = () => {
               <div ref={hideAddButton} className={bookingStyles.add_button_div}>
                 <div className={bookingStyles.add_button}>
                   <IconButton>
-                    <AddCircleOutline
+                    <Add
                       style={{ fontSize: 40 }}
                       className={bookingStyles.add_button_icon}
                       onClick={() => {
