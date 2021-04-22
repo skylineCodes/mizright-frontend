@@ -1473,7 +1473,7 @@ const Booking = () => {
                 <div className={bookingStyles.add_button}>
                   <IconButton>
                     <Add
-                      style={{ fontSize: 40 }}
+                      style={{ fontSize: 40, borderRadius: '50%' }}
                       className={bookingStyles.add_button_icon}
                       onClick={() => {
                         hideDiv();
